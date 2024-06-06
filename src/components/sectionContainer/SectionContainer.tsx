@@ -7,7 +7,7 @@ interface ISectionContainer extends HTMLAttributes<HTMLDivElement> {
 
 export default function SectionContainer({ children, className, ...rest }: ISectionContainer) {
   return (
-    <section {...rest} className={cn("w-full py-20", className)}>
+    <section {...rest} className={cn("w-full py-20 overflow-hidden", className)}>
       {children}
     </section>
   );

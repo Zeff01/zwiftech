@@ -1,10 +1,11 @@
 import Image from "next/image";
 import SectionContainer from "../sectionContainer/SectionContainer";
+import { motion } from "framer-motion";
 
 export default function NextInnovation() {
   return (
     <SectionContainer className="flex flex-col gap-y-6 w-full">
-      <div className="flex flex-col sm:flex-row items-center gap-4">
+      <div className="flex flex-col sm:flex-row items-center gap-4 overflow-hidden">
         <div className="w-full sm:w-[400px] flex flex-col gap-y-4">
           <div className="flex flex-col gap-y-2">
             <p className="font-bold text-xl">Dummy Data</p>
@@ -15,9 +16,13 @@ export default function NextInnovation() {
             has been the industry's standard dummy text ever since the 1500s,
           </p>
         </div>
-        <div className="h-[200px] sm:h-[250px] w-full sm:flex-grow flex flex-row items-center justify-center bg-custom-purple rounded-2xl shadow-lg">
+        <motion.div
+          initial={{ x: "100%" }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.8, type: "spring" }}
+          className="bg-custom-purple h-[200px] sm:h-[250px] w-full sm:flex-grow flex flex-row items-center justify-center rounded-2xl shadow-lg">
           <p className="text-white text-4xl sm:text-6xl text-center">WE HELP YOU </p>
-        </div>
+        </motion.div>
       </div>
       <div className="w-full aspect-[2.6] flex items-center">
         <Image
@@ -31,13 +36,29 @@ export default function NextInnovation() {
           style={{ objectFit: "cover" }}
         />
       </div>
-      <div className="bg-custom-white flex flex-col lg:flex-row justify-center items-center gap-x-10 rounded-2xl shadow-sm p-4">
-        <p className="text-6xl sm:text-7xl md:text-[90px] lg:text-[100px] text-custom-purple font-[900]">
+      <div className="bg-custom-white flex flex-col lg:flex-row justify-center items-center gap-x-10 rounded-2xl shadow-sm p-4 overflow-hidden">
+        <motion.p
+          initial={{ x: "-120%" }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.5, type: "spring" }}
+          className="text-6xl sm:text-7xl md:text-[90px] lg:text-[100px] text-custom-purple font-[900]">
           TRANSFORM
-        </p>
+        </motion.p>
         <div className="flex flex-col items-center text-4xl sm:text-5xl md:text-6xl">
-          <p className="font-liu">YOUR</p>
-          <p className="font-[900] font-lexend">BRAND</p>
+          <motion.p
+          initial={{ opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{delay:0.5, duration:0.5, type: "spring"}}
+            className="font-liu">
+            YOUR
+          </motion.p>
+          <motion.p
+            initial={{ opacity:0}}
+            whileInView={{opacity:1}}
+            transition={{delay:1.0, duration:0.5, type: "spring"}}
+            className="font-[900] font-lexend">
+            BRAND
+          </motion.p>
         </div>
       </div>
     </SectionContainer>

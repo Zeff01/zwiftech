@@ -1,4 +1,5 @@
 import Button from "../button/Button";
+import { motion } from "framer-motion";
 
 interface IBasicCard {
   title: string;
@@ -13,9 +14,15 @@ export default function BasicCard({ title, subTitle }: IBasicCard) {
         <p className="font-semibold text-xl sm:text-2xl">{title}</p>
         <p className="sm:text-lg">{subTitle}</p>
       </div>
-      <Button variant="ghost" className="text-sm sm:text-base font-semibold self-end pb-0">
-        Learn More
-      </Button>
+      <motion.div
+        initial={{ opacity: 0, y: "100%" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="w-fit self-end">
+        <Button variant="ghost" className="text-sm sm:text-base font-semibold pb-0">
+          Learn More
+        </Button>
+      </motion.div>
     </div>
   );
 }

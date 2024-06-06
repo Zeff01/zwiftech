@@ -1,3 +1,5 @@
+"use client";
+
 import Banner from "@/components/banner/Banner";
 import MarketingSolutions from "@/components/marketingSolutions/MarketingSolutions";
 import Presentation from "@/components/presentation/Presentation";

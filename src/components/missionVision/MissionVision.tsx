@@ -1,9 +1,14 @@
 import SectionContainer from "../sectionContainer/SectionContainer";
+import { motion } from "framer-motion";
 
 export default function MissionVision() {
   return (
     <SectionContainer className="flex flex-col gap-y-16 sm:gap-y-24">
-      <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0">
+      <motion.div
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.4 }}
+        className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0">
         <div className="sm:basis-5/12 flex flex-col justify-between">
           <p className="font-[500] text-2xl sm:text-3xl">Mission</p>
           <p className="sm:text-lg">Lorem Ipsum is simply dummy</p>
@@ -24,8 +29,12 @@ export default function MissionVision() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0">
+      </motion.div>
+      <motion.div
+        initial={{ x: 200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.4 }}
+        className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0">
         <div className="sm:basis-5/12 flex flex-col justify-between">
           <p className="font-[500] text-2xl sm:text-3xl">Vision</p>
           <p className="sm:text-lg">Lorem Ipsum is simply dummy</p>
@@ -48,7 +57,7 @@ export default function MissionVision() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </SectionContainer>
   );
 }
