@@ -1,7 +1,9 @@
 import Image from "next/image";
+import SectionContainer from "../sectionContainer/SectionContainer";
+
 export default function NextInnovation() {
   return (
-    <section className="flex flex-col gap-y-6 py-20 w-full">
+    <SectionContainer className="flex flex-col gap-y-6 w-full">
       <div className="flex flex-col sm:flex-row items-center gap-4">
         <div className="w-full sm:w-[400px] flex flex-col gap-y-4">
           <div className="flex flex-col gap-y-2">
@@ -38,6 +40,6 @@ export default function NextInnovation() {
           <p className="font-[900] font-lexend">BRAND</p>
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }

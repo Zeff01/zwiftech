@@ -1,10 +1,11 @@
 import Button from "../button/Button";
 import TeamCard from "../teamCard/TeamCard";
+import SectionContainer from "../sectionContainer/SectionContainer";
 import { teamCardData } from "@/lib/data";
 
 export default function Team() {
   return (
-    <section className="flex flex-col gap-y-12 w-full">
+    <SectionContainer className="flex flex-col gap-y-12">
       <div className="flex flex-col items-center gap-y-4">
         <p className="text-lg sm:text-xl font-bold text-center">
           Our Passionate team of creative professionals
@@ -35,6 +36,6 @@ export default function Team() {
           </div>
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }

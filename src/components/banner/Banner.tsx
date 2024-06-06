@@ -1,12 +1,13 @@
 import Button from "../button/Button";
 import GroupImages from "../groupImages/GroupImages";
+import SectionContainer from "../sectionContainer/SectionContainer";
 import { FaArrowDown } from "react-icons/fa6";
 import { imagesData } from "@/lib/data";
 import { Microsoft, IBM, Ebay, Amazon, Dropbox } from "../icons/Icons";
 
 export default function Banner() {
   return (
-    <section className="flex flex-col items-center gap-y-6 py-24">
+    <SectionContainer className="flex flex-col items-center gap-y-6">
       <h1 className="text-3xl sm:text-6xl text-center w-full max-w-[850px]">
         Elevate Your <span className="font-semibold text-custom-purple">Business</span> with{" "}
         <span className="font-semibold">Next-Generation Technology Solutions</span>
@@ -45,6 +46,6 @@ export default function Banner() {
         <Amazon />
         <Dropbox />
       </div>
-    </section>
+    </SectionContainer>
   );
 }

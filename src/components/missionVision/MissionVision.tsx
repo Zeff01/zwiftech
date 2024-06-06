@@ -1,6 +1,8 @@
+import SectionContainer from "../sectionContainer/SectionContainer";
+
 export default function MissionVision() {
   return (
-    <section className="flex flex-col gap-y-16 sm:gap-y-24 py-20">
+    <SectionContainer className="flex flex-col gap-y-16 sm:gap-y-24">
       <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0">
         <div className="sm:basis-5/12 flex flex-col justify-between">
           <p className="font-[500] text-2xl sm:text-3xl">Mission</p>
@@ -47,6 +49,6 @@ export default function MissionVision() {
           </div>
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }

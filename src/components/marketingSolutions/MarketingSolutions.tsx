@@ -1,9 +1,10 @@
 import BasicCard from "../basicCard/BasicCard";
+import SectionContainer from "../sectionContainer/SectionContainer";
 import { basicCardData } from "@/lib/data";
 
 export default function MarketingSolutions() {
   return (
-    <section className="flex flex-col items-center gap-y-12 py-20">
+    <SectionContainer className="flex flex-col items-center gap-y-12">
       <h2 className="font-bold text-lg sm:text-xl">What We Offer</h2>
       <h1 className="font-bold  text-2xl sm:text-3xl text-custom-purple">
         Our Marketing Solutions
@@ -13,6 +14,6 @@ export default function MarketingSolutions() {
           <BasicCard key={i} {...d} />
         ))}
       </div>
-    </section>
+    </SectionContainer>
   );
 }
