@@ -8,7 +8,6 @@ import Button from "@/components/button/Button";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-
 export const metadata: Metadata = {
   title: "ZwiftTech",
   description: "Elevate Your Business with Next-Generation Technology Solutions",
@@ -39,7 +38,7 @@ export default function RootLayout({
             </div>
             <Button className="bg-custom-black">Contact Us</Button>
           </div>
-          <RxHamburgerMenu className="sm:hidden text-2xl" /> 
+          <RxHamburgerMenu className="sm:hidden text-2xl" />
         </nav>
         <div className="px-2 sm:px-8">{children}</div>
       </body>

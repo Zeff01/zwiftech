@@ -50,7 +50,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col sm:flex-row items-center justify-between pt-6 pb-12 gap-3">
-        <p className="text-custom-gray sm:text-lg text-center">© 2024 Tech Innovators. All rights reserved.</p>
+        <p className="text-custom-gray sm:text-lg text-center">
+          © 2024 Tech Innovators. All rights reserved.
+        </p>
         <div className="flex flex-row gap-x-6">
           <Facebook />
           <Github />

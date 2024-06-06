@@ -17,13 +17,13 @@ export default function GroupImages({ imagesData }: IGroupImages) {
               zIndex: i + 1,
               transform: `translateX(${-16 * i}px)`,
             }}>
-            <Image 
-            key={i} 
-            src={data.imageUrl} 
-            width={60} 
-            height={60} 
-            alt={data.alt} 
-            className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]" 
+            <Image
+              key={i}
+              src={data.imageUrl}
+              width={60}
+              height={60}
+              alt={data.alt}
+              className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]"
             />
           </div>
         );

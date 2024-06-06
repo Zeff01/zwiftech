@@ -7,7 +7,9 @@ export default function MissionVision() {
           <p className="sm:text-lg">Lorem Ipsum is simply dummy</p>
         </div>
         <div className="sm:basis-6/12 flex flex-col  gap-y-3 sm:gap-y-6">
-          <p className="font-[500] text-2xl sm:text-3xl">Empowering Businesses Through Innovative Technology</p>
+          <p className="font-[500] text-2xl sm:text-3xl">
+            Empowering Businesses Through Innovative Technology
+          </p>
           <div className="flex flex-col gap-y-2 sm:gap-y-4">
             <p className="sm:text-lg">
               At Tech Innovators, our mission is to empower businesses by providing cutting-edge
@@ -27,7 +29,9 @@ export default function MissionVision() {
           <p className="sm:text-lg">Lorem Ipsum is simply dummy</p>
         </div>
         <div className="sm:basis-6/12 flex flex-col gap-y-3 sm:gap-y-6">
-          <p className="font-[500] text-2xl sm:text-3xl">Leading the Future of Technological Advancement</p>
+          <p className="font-[500] text-2xl sm:text-3xl">
+            Leading the Future of Technological Advancement
+          </p>
           <div className="flex flex-col gap-y-2 sm:gap-y-4">
             <p className="sm:text-lg">
               Our vision is to be a global leader in technological innovation, setting new standards
