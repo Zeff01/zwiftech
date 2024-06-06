@@ -38,9 +38,9 @@ export default function NextInnovation() {
       </div>
       <div className="bg-custom-white flex flex-col lg:flex-row justify-center items-center gap-x-10 rounded-2xl shadow-sm p-4 overflow-hidden">
         <motion.p
-          initial={{ x: "-120%" }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 0.5, type: "spring" }}
+          initial={{ opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:0.5, type: "spring"}}
           className="text-6xl sm:text-7xl md:text-[90px] lg:text-[100px] text-custom-purple font-[900]">
           TRANSFORM
         </motion.p>
