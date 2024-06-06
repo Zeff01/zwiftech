@@ -6,7 +6,7 @@ import Image from "next/image";
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 import Button from "@/components/button/Button";
 import Link from "next/link";
-import { RxHamburgerMenu } from "react-icons/rx";
+import SideBar from "@/components/sideBar/SideBar";
 
 export const metadata: Metadata = {
   title: "ZwiftTech",
@@ -38,7 +38,7 @@ export default function RootLayout({
             </div>
             <Button className="bg-custom-black">Contact Us</Button>
           </div>
-          <RxHamburgerMenu className="sm:hidden text-2xl" />
+          <SideBar />
         </nav>
         <div className="px-2 sm:px-8">{children}</div>
       </body>
