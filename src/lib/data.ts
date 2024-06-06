@@ -92,34 +92,34 @@ export const teamCardData = [
     name: "Herman Mays",
     position: "Chief Operating Officer (COO)",
   },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/6ffe/4f9b/f8b737677df5a98573c225afdb6036f4?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LTyQYbr11FZORbCSP--s2s2z~GgRINe904H4aA2QD2cD~cd-HJBwUFwQ5QxiY3qnR58cWvbMvIAGucw6Re4SGv9jVKEugypWSr67Ync2KXOihFhuoQYyoTTVaBQ2q3j5qamgwPmYELngt9KbJj9GA4e0uzeiHjBPTFGCZj7iY-zKPcZgVJbUrqd~~q6-4cLRx4yuhfrp5XYu1cvXmY~mLwsO-9tZPOlPV2peZSw5KB0X9hPbTrIR0pGFXn-2DRMgPbZKbJrLZ0ybULxjq2ga4MiVaUOg9jVX4BDtIuo4-jxO4FJ3ialH5RMO1RXMB08a3wkQVgPRlA7v-xvJ9Lvl1g__",
-    name: "Leyla Lozano",
-    position: "Vice President of Sales",
-  },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/8650/3f8c/e8e80cfa9c8a2bd3584c658ba4ed5018?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ozOLW-CmDHyTyWg1EB97OL3zmBubVYJx1dgFm3CLXZrRwt7REXMDtX1Bd43aBl923gbd7kycOc8HMsJ-tf1w~s8Ya~ME5hEHi9jivTiKJQQPp-Q0DkJIP1urrK0eqmbaLyfTrlC6AxBAHzytg2yaczHlOeONPGe~FmwXpaiYfvTNB7Ljey9ogbFl6WmKdPlCCb7MA8OGJ9OeZdII7qkpdOsGrP7euOGGhBb4LJMOMfMSBTBnMWiM8JkeH2ac3mXxbAGPXKopXdDOuxWR5vDbzFWbKL5Yc4hqckvdrCSz7CxFc1ExzluMVC2RL6vEKxngj9zeiOhaDQPtiV~-dEhtyQ__",
-    name: "Carol Rogers",
-    position: "President of Marketing",
-  },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/c356/c0c8/c2c74d5d77280dd349fb8ef40886fd25?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W0h85~ira5SGiMZTfE39gaSpgIqw-oqRnAkNoReyl95BrTE7NWrWHcZdz5HYPTICyOAHDSh8ZZjNFlh5aLMXWvqjkwgdmED21LHDjJVR6N3Uqo7nn4VsU~EeXVcOJ5BnevKVhBOvDl8me8ysbfxd9gsJHln1tU9pfHfEOFnyzrhqfxpriBvaxbm3BYfphXzhggCvvBN9h1aXuRR0jUO3cWeSeGFZEx~6Iug8nNGEUuVYxCsFhfDHmYQPHyia42HlGC1gyhMEixQCAJQ6Gfpq9-j8AKgoRQ793~adBgITO89OuJIT1ZGkgPJg-mwyfe8ZIXy8B5m0kU3~jiL0jF-Brg__",
-    name: "Caspar Hubbard",
-    position: "Director of Software Development",
-  },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/86c2/d2f3/3b546de827c9755149a4e253aef14432?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NdQSM6CMrdT4juC0a3s52tX3vKyV0usJgiMcCM1CM5tuEyasL5asxZTb2gstZKr1psz-nD0fUgPjVTmKOUMGtf7SJcFEIY5oY4fKEXxxXe4AqrHIRqWZr9gpXvCCucuoDn8CCfWK4uK8Og7zvQrXeInAg4rZkroXrjVAcYlSeI5lp9jq5qkHyQiqY0q9Jp-Vn-05d832UewzPRsogJjdZRPIBuBgvFkIanWAb0cymUPgh0Gg-DDA-kbNl7nVcipxdcwNpkQ4LpWZBWef9q8Efz76UTO9eNFTqC~Tb4J~j74aqbGJkPNddvTPCTER8YP3S7p70rco185lEjgKOetwHA__",
-    name: "Alex Martinez",
-    position: "Director of Cybersecurity",
-  },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/fc7c/df2f/0cf55cdded5bc405d764c9d2f283b92a?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jeLDuJKmvrbULgFoc0WjL1~Usi6DBo241I8Zw4kQgMdBlVuItXQLw-A0DV2wU-oRI1npqzzShjHyjmpqbfgUodgoCSFF5peW0VSTziv1l7VYGp4POb5yYQwAELdgRo1dWkGHJJCdWfDM24TxUfJM3yKWzXLyuFExLrGdF4VL7e~KpEbNeuEfX4zNZUcPMxWk-onR6bx-bi1zbMsTjx2JHbM7u6NCo~SEANve9274W0X5Sb8Wo6xDjdByfqPqgyoG4CNsOTnqI4m4RJ7UGM44-I12VHKiMN-aJI~wfvMb9m3KJzV2f2FP9lu53X9MdO0U9PU~bGKzcsMMvKFWxw2-LQ__",
-    name: "Harriett Mullins",
-    position: "Human Resources Manager",
-  },
+  // {
+  //   imageUrl:
+  //     "https://s3-alpha-sig.figma.com/img/6ffe/4f9b/f8b737677df5a98573c225afdb6036f4?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LTyQYbr11FZORbCSP--s2s2z~GgRINe904H4aA2QD2cD~cd-HJBwUFwQ5QxiY3qnR58cWvbMvIAGucw6Re4SGv9jVKEugypWSr67Ync2KXOihFhuoQYyoTTVaBQ2q3j5qamgwPmYELngt9KbJj9GA4e0uzeiHjBPTFGCZj7iY-zKPcZgVJbUrqd~~q6-4cLRx4yuhfrp5XYu1cvXmY~mLwsO-9tZPOlPV2peZSw5KB0X9hPbTrIR0pGFXn-2DRMgPbZKbJrLZ0ybULxjq2ga4MiVaUOg9jVX4BDtIuo4-jxO4FJ3ialH5RMO1RXMB08a3wkQVgPRlA7v-xvJ9Lvl1g__",
+  //   name: "Leyla Lozano",
+  //   position: "Vice President of Sales",
+  // },
+  // {
+  //   imageUrl:
+  //     "https://s3-alpha-sig.figma.com/img/8650/3f8c/e8e80cfa9c8a2bd3584c658ba4ed5018?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ozOLW-CmDHyTyWg1EB97OL3zmBubVYJx1dgFm3CLXZrRwt7REXMDtX1Bd43aBl923gbd7kycOc8HMsJ-tf1w~s8Ya~ME5hEHi9jivTiKJQQPp-Q0DkJIP1urrK0eqmbaLyfTrlC6AxBAHzytg2yaczHlOeONPGe~FmwXpaiYfvTNB7Ljey9ogbFl6WmKdPlCCb7MA8OGJ9OeZdII7qkpdOsGrP7euOGGhBb4LJMOMfMSBTBnMWiM8JkeH2ac3mXxbAGPXKopXdDOuxWR5vDbzFWbKL5Yc4hqckvdrCSz7CxFc1ExzluMVC2RL6vEKxngj9zeiOhaDQPtiV~-dEhtyQ__",
+  //   name: "Carol Rogers",
+  //   position: "President of Marketing",
+  // },
+  // {
+  //   imageUrl:
+  //     "https://s3-alpha-sig.figma.com/img/c356/c0c8/c2c74d5d77280dd349fb8ef40886fd25?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W0h85~ira5SGiMZTfE39gaSpgIqw-oqRnAkNoReyl95BrTE7NWrWHcZdz5HYPTICyOAHDSh8ZZjNFlh5aLMXWvqjkwgdmED21LHDjJVR6N3Uqo7nn4VsU~EeXVcOJ5BnevKVhBOvDl8me8ysbfxd9gsJHln1tU9pfHfEOFnyzrhqfxpriBvaxbm3BYfphXzhggCvvBN9h1aXuRR0jUO3cWeSeGFZEx~6Iug8nNGEUuVYxCsFhfDHmYQPHyia42HlGC1gyhMEixQCAJQ6Gfpq9-j8AKgoRQ793~adBgITO89OuJIT1ZGkgPJg-mwyfe8ZIXy8B5m0kU3~jiL0jF-Brg__",
+  //   name: "Caspar Hubbard",
+  //   position: "Director of Software Development",
+  // },
+  // {
+  //   imageUrl:
+  //     "https://s3-alpha-sig.figma.com/img/86c2/d2f3/3b546de827c9755149a4e253aef14432?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NdQSM6CMrdT4juC0a3s52tX3vKyV0usJgiMcCM1CM5tuEyasL5asxZTb2gstZKr1psz-nD0fUgPjVTmKOUMGtf7SJcFEIY5oY4fKEXxxXe4AqrHIRqWZr9gpXvCCucuoDn8CCfWK4uK8Og7zvQrXeInAg4rZkroXrjVAcYlSeI5lp9jq5qkHyQiqY0q9Jp-Vn-05d832UewzPRsogJjdZRPIBuBgvFkIanWAb0cymUPgh0Gg-DDA-kbNl7nVcipxdcwNpkQ4LpWZBWef9q8Efz76UTO9eNFTqC~Tb4J~j74aqbGJkPNddvTPCTER8YP3S7p70rco185lEjgKOetwHA__",
+  //   name: "Alex Martinez",
+  //   position: "Director of Cybersecurity",
+  // },
+  // {
+  //   imageUrl:
+  //     "https://s3-alpha-sig.figma.com/img/fc7c/df2f/0cf55cdded5bc405d764c9d2f283b92a?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jeLDuJKmvrbULgFoc0WjL1~Usi6DBo241I8Zw4kQgMdBlVuItXQLw-A0DV2wU-oRI1npqzzShjHyjmpqbfgUodgoCSFF5peW0VSTziv1l7VYGp4POb5yYQwAELdgRo1dWkGHJJCdWfDM24TxUfJM3yKWzXLyuFExLrGdF4VL7e~KpEbNeuEfX4zNZUcPMxWk-onR6bx-bi1zbMsTjx2JHbM7u6NCo~SEANve9274W0X5Sb8Wo6xDjdByfqPqgyoG4CNsOTnqI4m4RJ7UGM44-I12VHKiMN-aJI~wfvMb9m3KJzV2f2FP9lu53X9MdO0U9PU~bGKzcsMMvKFWxw2-LQ__",
+  //   name: "Harriett Mullins",
+  //   position: "Human Resources Manager",
+  // },
 ];
