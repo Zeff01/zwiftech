@@ -13,6 +13,7 @@ export default function GroupImages({ imagesData }: IGroupImages) {
       {imagesData.map((data, i) => {
         return (
           <motion.div
+            key={i}
             initial={{
               x: `${-60 * i}px`,
               opacity: 0,
@@ -32,7 +33,6 @@ export default function GroupImages({ imagesData }: IGroupImages) {
               transform: `translateX(${-16 * i}px)`,
             }}>
             <Image
-              key={i}
               src={data.imageUrl}
               width={60}
               height={60}

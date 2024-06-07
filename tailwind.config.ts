@@ -19,11 +19,15 @@ const config: Config = {
         "custom-gray": "#767676",
         "custom-white": "#F7F9FA",
       },
+      fontFamily: {
+        liu: "Liu Jian Mao Cao, cursive",
+        lexend: "Lexend, sans-serif",
+      },
+      screens: {
+        xsm: "360px"
+      }
     },
-    fontFamily: {
-      liu: "Liu Jian Mao Cao, cursive",
-      lexend: "Lexend, sans-serif",
-    },
+    
   },
   plugins: [],
 };

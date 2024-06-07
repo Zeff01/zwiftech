@@ -41,7 +41,7 @@ export default function NextInnovation() {
           initial={{ opacity:0}}
           whileInView={{opacity:1}}
           transition={{duration:0.5, type: "spring"}}
-          className="text-6xl sm:text-7xl md:text-[90px] lg:text-[100px] text-custom-purple font-[900]">
+          className="text-4xl xsm:text-5xl sm:text-[64px] md:text-[72px] lg:text-[90px] text-custom-purple font-[900]">
           TRANSFORM
         </motion.p>
         <div className="flex flex-col items-center text-4xl sm:text-5xl md:text-6xl">
