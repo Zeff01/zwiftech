@@ -38,7 +38,7 @@ export default function GroupImages({ imagesData }: IGroupImages) {
               height={60}
               alt={data.alt}
               className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]"
-              style={{objectFit: "cover", objectPosition: "50% top"}}
+              style={{ objectFit: "cover", objectPosition: "50% top" }}
             />
           </motion.div>
         );

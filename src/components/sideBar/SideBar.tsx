@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function SideBar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   function toggleSidebar() {
-    setIsOpen(o => !o)
+    setIsOpen((o) => !o);
   }
 
   return (

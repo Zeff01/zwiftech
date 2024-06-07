@@ -8,7 +8,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-custom-purple text-white hover:bg-custom-purple/80 ",
-        outline: "border border-custom-black text-black hover:border-transparent hover:bg-custom-purple hover:text-custom-white",
+        outline:
+          "border border-custom-black text-black hover:border-transparent hover:bg-custom-purple hover:text-custom-white",
         icon: "w-[50px] sm:w-[80px] h-[50px] sm:h-[80px] px-0 py-0 bg-custom-purple text-custom-yellow border border-transparent hover:border-custom-purple hover:bg-transparent hover:text-custom-purple ",
         ghost: "text-black shadow-none border border-transparent hover:border-custom-black",
       },

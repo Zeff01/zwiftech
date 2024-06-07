@@ -38,24 +38,24 @@ export default function NextInnovation() {
       </div>
       <div className="bg-custom-white flex flex-col lg:flex-row justify-center items-center gap-x-10 rounded-2xl shadow-sm p-4 overflow-hidden">
         <motion.p
-          initial={{ opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:0.5, type: "spring"}}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, type: "spring" }}
           className="text-4xl xsm:text-5xl sm:text-[64px] md:text-[72px] lg:text-[90px] text-custom-purple font-[900]">
           TRANSFORM
         </motion.p>
         <div className="flex flex-col items-center text-4xl sm:text-5xl md:text-6xl">
           <motion.p
-          initial={{ opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{delay:0.5, duration:0.5, type: "spring"}}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
             className="font-liu">
             YOUR
           </motion.p>
           <motion.p
-            initial={{ opacity:0}}
-            whileInView={{opacity:1}}
-            transition={{delay:1.0, duration:0.5, type: "spring"}}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1.0, duration: 0.5, type: "spring" }}
             className="font-[900] font-lexend">
             BRAND
           </motion.p>

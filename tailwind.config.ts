@@ -24,10 +24,9 @@ const config: Config = {
         lexend: "Lexend, sans-serif",
       },
       screens: {
-        xsm: "360px"
-      }
+        xsm: "360px",
+      },
     },
-    
   },
   plugins: [],
 };

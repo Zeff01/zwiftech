@@ -30,13 +30,37 @@ export default function RootLayout({
           <Image src={"./logo.svg"} width={100} height={56} alt="ZwiftTech logo" />
           <div className="hidden sm:flex flex-row items-center gap-x-6 md:gap-x-10">
             <div className="flex flex-row gap-x-3 md:gap-x-6 font-semibold">
-              <Link href="/" className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">About Us</Link>
-              <Link href="/" className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">Our Blog</Link>
-              <Link href="/" className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">Projects</Link>
-              <Link href="/" className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">Features</Link>
-              <Link href="/" className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">Pricing</Link>
+              <Link
+                href="/"
+                className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">
+                About Us
+              </Link>
+              <Link
+                href="/"
+                className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">
+                Our Blog
+              </Link>
+              <Link
+                href="/"
+                className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">
+                Projects
+              </Link>
+              <Link
+                href="/"
+                className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">
+                Features
+              </Link>
+              <Link
+                href="/"
+                className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">
+                Pricing
+              </Link>
             </div>
-            <Link href="/" className="bg-custom-black text-white px-6 py-2 rounded-full min-w-[130px] text-center hover:bg-custom-purple active:scale-95 transition-all duration-150 shadow-md">Contact Us</Link>
+            <Link
+              href="/"
+              className="bg-custom-black text-white px-6 py-2 rounded-full min-w-[130px] text-center hover:bg-custom-purple active:scale-95 transition-all duration-150 shadow-md">
+              Contact Us
+            </Link>
           </div>
           <SideBar />
         </nav>

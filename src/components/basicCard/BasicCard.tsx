@@ -10,11 +10,11 @@ interface IBasicCard {
 export default function BasicCard({ title, subTitle }: IBasicCard) {
   return (
     <div className="flex flex-col gap-y-3 sm:gap-y-6 bg-custom-white w-full max-w-[300px] rounded-2xl px-3 sm:px-4 py-6 sm:py-8 shadow-sm justify-between">
-      <motion.div 
-      initial={{opacity:0, x: -40}}
-      whileInView={{opacity:1, x:0}}
-      transition={{duration: 0.4}}
-      className="flex flex-col gap-y-2 sm:gap-y-3">
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4 }}
+        className="flex flex-col gap-y-2 sm:gap-y-3">
         <p className="font-semibold text-xl sm:text-2xl">{title}</p>
         <p className="sm:text-lg">{subTitle}</p>
       </motion.div>
