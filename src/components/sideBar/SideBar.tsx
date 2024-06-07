@@ -39,6 +39,9 @@ export default function SideBar() {
         <Link href="/" onClick={toggleSidebar}>
           Pricing
         </Link>
+        <Link href="/" onClick={toggleSidebar}>
+          Contact Us
+        </Link>
       </div>
     </div>
   );

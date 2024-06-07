@@ -38,7 +38,7 @@ export default function Banner() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="flex flex-row w-full sm:w-auto">
+        className="flex flex-row w-full sm:w-auto justify-center">
         <div className="flex flex-col items-center  w-1/3 sm:w-[150px] max-w-[150px]">
           <p className="text-xl sm:text-3xl font-semibold">100+</p>
           <p className="font-semibold">Partnership</p>
@@ -53,7 +53,7 @@ export default function Banner() {
         </div>
       </motion.div>
       <Button variant="icon">
-        <FaArrowDown className="text-custom-yellow text-lg sm:text-xl" />
+        <FaArrowDown className=" text-lg sm:text-xl" />
       </Button>
       <h3 className="font-bold text-custom-gray text-xl">Trusted by Job Holders from</h3>
       <motion.div

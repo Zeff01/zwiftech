@@ -32,7 +32,7 @@ export default function NextInnovation() {
           width={1300}
           height={500}
           alt="Group of Umbrellas"
-          className="rounded-2xl shadow-lg w-full aspect-[2.6]"
+          className="rounded-2xl shadow-lg w-full xsm:aspect-[1.4] sm:aspect-[1.8] md:aspect-[2.2] lg:aspect-[2.6]"
           style={{ objectFit: "cover" }}
         />
       </div>

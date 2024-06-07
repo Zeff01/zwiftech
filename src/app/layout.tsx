@@ -26,21 +26,21 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-gray-100">
       <body className={lato.className}>
-        <nav className="w-full pt-6 px-2 sm:px-8 flex flex-row justify-between items-center">
+        <nav className="w-full pt-6 px-2 sm:px-8 md:px-12 lg:px-16 flex flex-row gap-x-4 justify-between items-center">
           <Image src={"./logo.svg"} width={100} height={56} alt="ZwiftTech logo" />
           <div className="hidden sm:flex flex-row items-center gap-x-6 md:gap-x-10">
             <div className="flex flex-row gap-x-3 md:gap-x-6 font-semibold">
-              <Link href="/">About Us</Link>
-              <Link href="/">Our Blog</Link>
-              <Link href="/">Projects</Link>
-              <Link href="/">Features</Link>
-              <Link href="/">Pricing</Link>
+              <Link href="/" className="text-center">About Us</Link>
+              <Link href="/" className="text-center">Our Blog</Link>
+              <Link href="/" className="text-center">Projects</Link>
+              <Link href="/" className="text-center">Features</Link>
+              <Link href="/" className="text-center">Pricing</Link>
             </div>
-            <Button className="bg-custom-black">Contact Us</Button>
+            <Link href="/" className="bg-custom-black text-white px-6 py-2 rounded-full shadow-md min-w-[130px] text-center">Contact Us</Link>
           </div>
           <SideBar />
         </nav>
-        <div className="px-2 sm:px-8">{children}</div>
+        <div className="px-2 sm:px-8 md:px-12 lg:px-16">{children}</div>
       </body>
     </html>
   );
