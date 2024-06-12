@@ -15,14 +15,14 @@ export default function TeamCard({ imageUrl, name, position }: ITeamCard) {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.3 }}        
-        className="absolute left-0 bottom-6 flex flex-col items-center gap-y-2 z-[3] w-full">
+        className="absolute left-0 bottom-6 flex flex-col items-center gap-y-1 z-[3] w-full">
         <p className="text-lg text-center font-bold text-custom-purple drop-shadow-md">{name}</p>
         <p className="text-lg text-center text-white drop-shadow-md">{position}</p>
       </motion.div>
       <div
         className="absolute top-0 left-0 w-full h-full z-[2] bg-transparent"
         style={{
-          backgroundImage: "linear-gradient(to top, black 0%, transparent 50%)",
+          backgroundImage: "linear-gradient(to top, black 0%, transparent 60%)",
         }}
       />
     </div>

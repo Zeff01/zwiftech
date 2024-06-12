@@ -11,9 +11,9 @@ export default function Presentation() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         className="flex flex-col items-center">
-        <p className="font-bold text-lg sm:text-xl">Dummy Data</p>
-        <p className="font-bold  text-2xl sm:text-4xl text-custom-purple text-center">
-          Lorem Ipsum is a simply Dummy Data
+        <p className="font-bold text-lg sm:text-xl">Our Services</p>
+        <p className="font-bold  text-2xl sm:text-3xl text-custom-purple text-center">
+        Innovative software and cloud solutions for streamlined, growth-driven operations.
         </p>
       </motion.div>
       <div className="flex flex-row flex-wrap gap-4 justify-center">

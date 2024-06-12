@@ -39,8 +39,7 @@ export default function Footer() {
             alt="ZwiftTech logo"
           />
           <p className="sm:text-lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry
+            Thank you for choosing ZwiftTech. Let's innovate and succeed together.
           </p>
         </motion.div>
         <div className="flex flex-row flex-grow justify-center sm:justify-around sm:text-lg gap-3 flex-wrap">
@@ -50,30 +49,12 @@ export default function Footer() {
             initial="hidden"
             whileInView="show">
             <motion.p className="font-semibold" variants={childVariants}>
-              Product
+              Products
             </motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-          </motion.div>
-          <motion.div
-            className="min-w-[120px] flex flex-col items-center"
-            variants={parentVariants}
-            initial="hidden"
-            whileInView="show">
-            <motion.p className="font-semibold" variants={childVariants}>
-              Company
-            </motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-          </motion.div>
+            <motion.p variants={childVariants}>Software Solutions</motion.p>
+            <motion.p variants={childVariants}>AI integration</motion.p>
+            <motion.p variants={childVariants}>Business Tech Integration</motion.p>           
+          </motion.div>          
           <motion.div
             className="min-w-[120px] flex flex-col items-center"
             variants={parentVariants}
@@ -82,12 +63,9 @@ export default function Footer() {
             <motion.p className="font-semibold" variants={childVariants}>
               Partnerships
             </motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
-            <motion.p variants={childVariants}>Lorem Ipsum</motion.p>
+            <motion.p variants={childVariants}>Codibility</motion.p>
+            <motion.p variants={childVariants}>Applete</motion.p>
+            <motion.p variants={childVariants}>BradWell</motion.p>           
           </motion.div>
         </div>
       </div>
@@ -97,7 +75,7 @@ export default function Footer() {
           whileInView={{ x: 0 }}
           transition={{ duration: 0.4, type: "spring" }}
           className="text-custom-gray sm:text-lg text-center">
-          © 2024 Tech Innovators. All rights reserved.
+          © 2024 Zwift Tech. All rights reserved.
         </motion.p>
         <motion.div
           initial={{ x: "100%" }}

@@ -1,8 +1,7 @@
 export const imagesData = [
   {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/4ff9/fc42/f4162dfbca6f04b49e038fdb45a52431?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oUphu~6cMS63pQeIoaxavVd0yVv1Ma7wynXnTAon6Aetzr9Hj~BrTTI-eLWwPoXPe7aiBQZdp7~3Wu4avuCc1G7~DnjMTkwzlG64JuCh8Qj2oP~X7JYCstgEIBjka8Nah4k9CWShVswxmXN3MbXd88hnCO5lz8MkZewMPpL5xYeXFxHlq9Ao6~9tjL~Nf7eX9zen0i9yS2z4iCF9u2DewMqG-2LDuYt-tysd8jeIKIhdDR7u-pcTOEY-UAOIxtWY52EV4PlZOTT32nYJQwqoSLCSO6IGrMhLapjZcm5-aR9BmWjj~oLcqYwLTk0qm6E5SsJUI2KDpyAqbRu9EdyxTQ__",
-    alt: "ZwiftTech founder",
+    imageUrl: "https://avatars.githubusercontent.com/u/81437973?v=4",
+    alt: "ZwiftTech founder"
   },
   {
     imageUrl:
@@ -51,33 +50,32 @@ export const cardWithImageData = [
     imageUrl:
       "https://s3-alpha-sig.figma.com/img/6c47/a798/bbbf48f3893faa8844090afbc15bcf52?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OQR3msPxXA6QYt98ytRgDsdyMJgDY4TdqbMLaWqg359Zq-iGJ-mVXHNCd5FAUXBGCiYrsRIsp~wdzjiJCIeCKQgxoUX~op~cPp39iFpPuOImIig14BBcNrIZipJaoegUMRQu7XpwOGo--sWPL4TVs23mM~QcvcxpC-JAKbhA92g5oQNb9H5VQR7se2S~eCrM9pdVX~yJJZrTgkz-OSx0t7Mrau1r30ACi6ECtgW~aqkq93MKfbVkS6pgCApXEnNYfq45sn0PrZlIsJ10Cwu1nbtbFhMQeo-mh0H3udHiINM25JM2Lc9sW-ItvA49cRsTTHeJUWa6lAdSJoLTtKwF6Q__",
     alt: "Office Meeting",
-    title: "Title Of this Image",
+    title: "Collaborate with our team",
   },
   {
     imageUrl:
       "https://s3-alpha-sig.figma.com/img/9ce5/6f3a/ca35e77a0cf6ae9d8d977099fa7122a4?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L7BXI~82O69x7QD5lUBR1SHj8r17Gdht0Zdw~uIBnwjpfIhDjQAmKG3BHPnD33U0bxU~ptZJrsybXMluAmpPRmgsFrvVONT6xU2W-bYB7n1SX8nTK7IfCF4Cp7IPm2GRQ4O3~iWN2G--rtm7ASPpA3VCpja-LYpiQeANkVddhyYAXun72yvCC9EUa9wyj2xwf6MZBp02HAfQWNeJz6ZBtk4NV3b~b4oQboGFA7F8O7qC5cJaGIc3MA665K7Irs-k9c0zSK4yEhcZlsXHsjeU9nvwOaFG3barEw8knARp1nidhhhaHHVmsC-BereTrOZTYGXggvKIUnNXOJ7xW2Zq2w__",
     alt: "High Rise Building",
-    title: "Title Of this Image",
+    title: "Build your business",
   },
   {
     imageUrl:
       "https://s3-alpha-sig.figma.com/img/8fab/45cd/0b2f05734bdf4ca69a577582a71ef82d?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LLhYSB0NB6RxYxyhwOxKfb9pdWpqR485e2o4banFgBkIjWi65pxge0jPhgLqj61uAQ8mWUuPHiaOdFKE-w4r4fWheu9ak1l~YfXIlExBM2phAOKGvVCDGHL11lPultPjQCiarvRhNQS25bqgMVDJ7kKu~53dzRE0UPrpgk~i7Cm7SGdeh3zaa3BfMgmlfvrK5dxWehUdpvKNm7qho05h5aZvEOQgBwSv-bHJrjOlJwAX0URiFB3Vzpx2MYcWpR9uIS4j2vGYc~raYx6vRcKTxbpeDMI5Bn7VyheYjBdoIcKkkrFOq8WuM~oSzQ69qnA8CYGDi3o83kdlF1j6tLgc4w__",
     alt: "Planning",
-    title: "Title Of this Image",
+    title: "Plan your future endeavor",
   },
   {
     imageUrl:
       "https://s3-alpha-sig.figma.com/img/85c8/4fa7/42951fd2f50c57386d0eea5f5218a451?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PcLdogZDSx-yBWSVErlsYeVK9-wlHpDgsw1pO~d6R~E9TTYharZrh7XHQph092-n4uyuGxzNiuMRe~qr3A6y8lvS78G~hcoICrW3o~NuHnTmXHPlI3jtUjp4BLuS8H0OazEZ3FibtK2~8-~2GhDwHFbJgcqd1FZ~E5QpgExsLPFWgpDegxtUCSjQdhcsAObcz7FH7X5Rfos-mUhjmeiUSdHRVJNnByuSbjAd6fV1EDGSlvOB~wcMCIyfGkq0IGrmajvmsgm4JnMVr5xkn8isSZoPUIlEOdKX-twUn7AGChAJ6lBJnQdFj-7j1IjBAsq3YAVnzU3Ttm4XQXgz3bIOAQ__",
     alt: "Team Photo",
-    title: "Title Of this Image",
+    title: "Manage your team",
   },
 ];
 
 export const teamCardData = [
   {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/2d6c/e8db/49d84ca5fa31c131e5fd47040e19f2ba?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AwngqtwQ--D3rGO1gH0MpEJpwHlJGh61ZtQP-mHXe~HC4nOuN8akR~t3EJnhhgPMJyiL6g1ZpiT5-vmhlaBg4uYfK41VyZNO4R63KV4R9AE8TCI5~XCjVzn1JMF2ho5ysosLqjIEkGXkWs-FKlgf3v53FLWrsMXnRx~UIXhF~MG8tvhEMMUbXDnzXubiZB82Y0aTwc9uCCqREgj9YjP2qELVuNuwJvJUrb3dOcWYT~Ew1l0ou4KxD1dZ2y5z7KcJ8VV7lPsd7T0Npb0qtDs-o073xoKp34VK9lWXb1X6tb2EwH5AO0YKBtx5O-rchM~pxPyOQCXjy3kaaw1uEF9ypQ__",
-    name: "Briony Powell",
+    imageUrl: "https://avatars.githubusercontent.com/u/81437973?v=4",
+    name: "Jzeff Kendrew Somera",
     position: "Chief Executive Officer (CEO)",
   },
   {

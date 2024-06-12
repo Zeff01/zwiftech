@@ -11,7 +11,7 @@ export default function MissionVision() {
         className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0">
         <div className="sm:basis-5/12 flex flex-col justify-between">
           <p className="font-[500] text-2xl sm:text-3xl">Mission</p>
-          <p className="sm:text-lg">Lorem Ipsum is simply dummy</p>
+          <p className="sm:text-lg">To deliver exceptional value through technology.</p>
         </div>
         <div className="sm:basis-6/12 flex flex-col  gap-y-3 sm:gap-y-6">
           <p className="font-[500] text-2xl sm:text-3xl">
@@ -19,7 +19,7 @@ export default function MissionVision() {
           </p>
           <div className="flex flex-col gap-y-2 sm:gap-y-4">
             <p className="sm:text-lg">
-              At Tech Innovators, our mission is to empower businesses by providing cutting-edge
+              At Zwift Tech, our mission is to empower businesses by providing cutting-edge
               technology solutions that drive growth, efficiency, and security.{" "}
             </p>
             <p className="sm:text-lg">
@@ -37,7 +37,7 @@ export default function MissionVision() {
         className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0">
         <div className="sm:basis-5/12 flex flex-col justify-between">
           <p className="font-[500] text-2xl sm:text-3xl">Vision</p>
-          <p className="sm:text-lg">Lorem Ipsum is simply dummy</p>
+          <p className="sm:text-lg">To share our expertise across different industries.</p>
         </div>
         <div className="sm:basis-6/12 flex flex-col gap-y-3 sm:gap-y-6">
           <p className="font-[500] text-2xl sm:text-3xl">

@@ -8,12 +8,11 @@ export default function NextInnovation() {
       <div className="flex flex-col sm:flex-row items-center gap-4 overflow-hidden">
         <div className="w-full sm:w-[400px] flex flex-col gap-y-4">
           <div className="flex flex-col gap-y-2">
-            <p className="font-bold text-xl">Dummy Data</p>
+            <p className="font-bold text-xl">We Help You</p>
             <p className="font-bold text-4xl text-custom-purple">Your Next Innovation.</p>
           </div>
           <p className="text-lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s,
+          At ZwiftTech, we empower businesses with tailored technology solutions. Our services include software development, data analytics, and cloud integration, helping clients streamline operations and drive growth.
           </p>
         </div>
         <motion.div
