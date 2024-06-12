@@ -1,28 +1,17 @@
 export const imagesData = [
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/81437973?v=4",
+    imageUrl:"/joanne-reyes.png",    
+    alt: "ZwiftTech founder"
+
+  },
+  {
+    imageUrl: "/armand-reyes.png",    
     alt: "ZwiftTech founder"
   },
   {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/1be7/ff65/d98d923c16b50b5bd3722a6e84cf9b1b?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hnjC-A2yoCAcV4GLEwh4gU1ppc2mPDZmmp9g5iTX7s1AwR-AWwM5KP0humYb~RdsBHngv6yiOhxeAPVXLT-62ZK-6kOaauk7v2RjwtHcJqfDdxap65caSJyg0eyVGARmf7KISALhz~Y8Dc1K4BN3Ml2wNFv9PPuoZLpqQz~vBTqJ4CmVloPne7kZ8PJL7eWUZD~EFW8Rrp3LCfGlG-dELnpbSQ5vRXCx~Rq-EdtXtNYJrchwWGtcVdz~BvcKZNrNvJhXrutZsiC5IQHe6cscC3Tm1pj0cUPB4NVn34WE0DOKCv6wA5WoCXJy~mIos8xlvq872ySgaD09ZEH6L7l3ig__",
-    alt: "ZwiftTech founder",
-  },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/36bb/bd71/02945f5d50c73c3a95344f1d1c0c4e05?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Xb3mpQszMQxGtDHPSVCcemuoVqtot~DEEqUheHo1RpMI~5KF6sEmB8ZvAxUJoVVB7AgV9OpbWzzQQacd99MwQ0RL5Kko4JrbtuNkinmKlZSwTjpt2s9CkLMhcAeMA0NcTpepXTphrSMRUksI13mBpgQmiQBW6xwrrdthcYur2QF8oGpIaeoQE9zTeSsc~WQLzNzZYGl3rq~8i09DuGCAi3lME0g9rYqDTPSMoHJJDAJW3s3g4W6rSOdpQ2tN4Wn3Jf3luK74WtxeKqpySOfifpIPH8JM6zy~1Rp39ab5m3AsnQhr-yKdYozhYE3bKWy3WNnjy9Bqkx9hPWZT-cYEOw__",
-    alt: "ZwiftTech founder",
-  },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/c3f8/0b6f/9948a3339c24a551d170a392381600f9?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dGsBg2jhD~QtpgC8mQ-td-nHDoOeAJ4jnn7nmmVh3i~znec5-sDZvGTHGBTNmD~CRKryG6OfntnTarxWKMUvP1JPO3pA~6jFtTnvbhf1CftMnSTNL1cj~XSBaLgDoD5KEQLby60RI5ExLZe-jBZeiUBFex5U~jkJquEDHCC~yifAfHvV9wADbNPOMB2DEYQi3h~YrKDWw~fg7YjZs4vfO9Y6i6b5u2cI0OeXxkWxrjyo5MZudOcpmQbEwCkw~WW~Hiik1SkACIJKVIHxe9onDEXo8iD0tXmK4mVPPz17zURHnKB~w95G6a8rDKgs9K-DtAO6weIWdTaxNu-TPEmN4w__",
-    alt: "ZwiftTech founder",
-  },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/df11/2fb3/9cc7e136656dd2ba89fbc9e93087e615?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IibVxoFNaBpK8QRLSpaWiVFUO-HJgHt5F3sKY5pq6lqWaOULwKScjLQlyTGy1Z3owMwQgO2zMWLxh1VH33FbMdXuAUJBsxX1WJjT2-R2olCbFcOQHjGasU6j1EPIh3jCmrHoQFx6-44ermOvqVS3ssIuEwZb6jBhDe4R-FfAQEtFN8StVBrG-LGAsGsy89QvtypsDdloZjQdHNhxvwq-cIXO~xmmy4xpbJAkYXfCZoWov6JCRD4bpYZV-YyzDItzrjSeCwVwL4-dNpt0vAOcLHou2JwNfKYsbdnD2z-ZtMPwImdcd4MNufaMyDe-bYWqD~oUPDu~EIseQjPieWcNSA__",
-    alt: "ZwiftTech founder",
-  },
+    imageUrl: "/zeff.png",
+    alt: "ZwiftTech founder"
+  },  
 ];
 
 export const basicCardData = [
@@ -74,50 +63,19 @@ export const cardWithImageData = [
 
 export const teamCardData = [
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/81437973?v=4",
+    imageUrl:"/joanne-reyes.png",
+    name: "Joanne Reyes",
+    position: "Co-Founder",
+
+  },
+  {
+    imageUrl: "/armand-reyes.png",
+    name: "Armand Reyes",
+    position: "Co-Founder",
+  },
+  {
+    imageUrl: "/zeff.png",
     name: "Jzeff Kendrew Somera",
-    position: "Chief Executive Officer (CEO)",
+    position: "Co-Founder",
   },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/aa0e/df0c/feb711531fafac9c8be77c7f3d27cde5?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ixhg2RCbHL0QfcjaYYNY08-xLovTZOKqjGGHeL-5RoLIUNCNFr-j-uah4XbXtw5S5930OUK32PpbiWp5Ai71JARquO3wIseKBRZWt0qHssnkk3NqgqYgGlGCPzUYH0mThVxMGANDFP51FAS3xZxb4rYEsQ6loC3Sto3GBWEAUZ4pquyX74y8P~UFb6-TzwwQJrQk5h8fanrJW6QCzhjm3unRZGAC3twc8bNSgtsjOKjdboSE23LmIEqArO1tV3Ac9NEMYn1Ob6XjuA4u6LPFvakxuisaRByWcql0bCrPauDhojFXjWColYQrRmBz9M-~bPXjH7rrZrLyuFwxnDwt~g__",
-    name: "Bryan Archer",
-    position: "Chief Technology Officer (CTO)",
-  },
-  {
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/a362/b773/c072624e555198de6c93c2bc303265b4?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DB64axiW6IbWYIa3E3MoOwGduwHBIuOeKnD5-1hznLkFzvTYYMrjl9abMDs~MxXOJozvjgn3OhuLTSXBioufOlSVHeiqDB2iLwhy1p24aamFb6pV5X5vxMEVL4aK1taxP7IMGI4LcrnPW44cDhwXv2EusBZRK7DLNt7J7fFFuAwBVq0RnUdWeAzil~U9sELOQ03JqzvfmjBVX7FRoYjxWY55F5nJGJbyvOAQGVMnAujnRLbxnONXtoYn-ZEvUfr~xLQHfwa3Y8HeHGj4HsDTTEwb2AFnxg5VB~MD5aa1pqUcTRnyLTYn4Fkex-xin1QpN24IpK~GgWTBG67pVQEFPQ__",
-    name: "Herman Mays",
-    position: "Chief Operating Officer (COO)",
-  },
-  // {
-  //   imageUrl:
-  //     "https://s3-alpha-sig.figma.com/img/6ffe/4f9b/f8b737677df5a98573c225afdb6036f4?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LTyQYbr11FZORbCSP--s2s2z~GgRINe904H4aA2QD2cD~cd-HJBwUFwQ5QxiY3qnR58cWvbMvIAGucw6Re4SGv9jVKEugypWSr67Ync2KXOihFhuoQYyoTTVaBQ2q3j5qamgwPmYELngt9KbJj9GA4e0uzeiHjBPTFGCZj7iY-zKPcZgVJbUrqd~~q6-4cLRx4yuhfrp5XYu1cvXmY~mLwsO-9tZPOlPV2peZSw5KB0X9hPbTrIR0pGFXn-2DRMgPbZKbJrLZ0ybULxjq2ga4MiVaUOg9jVX4BDtIuo4-jxO4FJ3ialH5RMO1RXMB08a3wkQVgPRlA7v-xvJ9Lvl1g__",
-  //   name: "Leyla Lozano",
-  //   position: "Vice President of Sales",
-  // },
-  // {
-  //   imageUrl:
-  //     "https://s3-alpha-sig.figma.com/img/8650/3f8c/e8e80cfa9c8a2bd3584c658ba4ed5018?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ozOLW-CmDHyTyWg1EB97OL3zmBubVYJx1dgFm3CLXZrRwt7REXMDtX1Bd43aBl923gbd7kycOc8HMsJ-tf1w~s8Ya~ME5hEHi9jivTiKJQQPp-Q0DkJIP1urrK0eqmbaLyfTrlC6AxBAHzytg2yaczHlOeONPGe~FmwXpaiYfvTNB7Ljey9ogbFl6WmKdPlCCb7MA8OGJ9OeZdII7qkpdOsGrP7euOGGhBb4LJMOMfMSBTBnMWiM8JkeH2ac3mXxbAGPXKopXdDOuxWR5vDbzFWbKL5Yc4hqckvdrCSz7CxFc1ExzluMVC2RL6vEKxngj9zeiOhaDQPtiV~-dEhtyQ__",
-  //   name: "Carol Rogers",
-  //   position: "President of Marketing",
-  // },
-  // {
-  //   imageUrl:
-  //     "https://s3-alpha-sig.figma.com/img/c356/c0c8/c2c74d5d77280dd349fb8ef40886fd25?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W0h85~ira5SGiMZTfE39gaSpgIqw-oqRnAkNoReyl95BrTE7NWrWHcZdz5HYPTICyOAHDSh8ZZjNFlh5aLMXWvqjkwgdmED21LHDjJVR6N3Uqo7nn4VsU~EeXVcOJ5BnevKVhBOvDl8me8ysbfxd9gsJHln1tU9pfHfEOFnyzrhqfxpriBvaxbm3BYfphXzhggCvvBN9h1aXuRR0jUO3cWeSeGFZEx~6Iug8nNGEUuVYxCsFhfDHmYQPHyia42HlGC1gyhMEixQCAJQ6Gfpq9-j8AKgoRQ793~adBgITO89OuJIT1ZGkgPJg-mwyfe8ZIXy8B5m0kU3~jiL0jF-Brg__",
-  //   name: "Caspar Hubbard",
-  //   position: "Director of Software Development",
-  // },
-  // {
-  //   imageUrl:
-  //     "https://s3-alpha-sig.figma.com/img/86c2/d2f3/3b546de827c9755149a4e253aef14432?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NdQSM6CMrdT4juC0a3s52tX3vKyV0usJgiMcCM1CM5tuEyasL5asxZTb2gstZKr1psz-nD0fUgPjVTmKOUMGtf7SJcFEIY5oY4fKEXxxXe4AqrHIRqWZr9gpXvCCucuoDn8CCfWK4uK8Og7zvQrXeInAg4rZkroXrjVAcYlSeI5lp9jq5qkHyQiqY0q9Jp-Vn-05d832UewzPRsogJjdZRPIBuBgvFkIanWAb0cymUPgh0Gg-DDA-kbNl7nVcipxdcwNpkQ4LpWZBWef9q8Efz76UTO9eNFTqC~Tb4J~j74aqbGJkPNddvTPCTER8YP3S7p70rco185lEjgKOetwHA__",
-  //   name: "Alex Martinez",
-  //   position: "Director of Cybersecurity",
-  // },
-  // {
-  //   imageUrl:
-  //     "https://s3-alpha-sig.figma.com/img/fc7c/df2f/0cf55cdded5bc405d764c9d2f283b92a?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jeLDuJKmvrbULgFoc0WjL1~Usi6DBo241I8Zw4kQgMdBlVuItXQLw-A0DV2wU-oRI1npqzzShjHyjmpqbfgUodgoCSFF5peW0VSTziv1l7VYGp4POb5yYQwAELdgRo1dWkGHJJCdWfDM24TxUfJM3yKWzXLyuFExLrGdF4VL7e~KpEbNeuEfX4zNZUcPMxWk-onR6bx-bi1zbMsTjx2JHbM7u6NCo~SEANve9274W0X5Sb8Wo6xDjdByfqPqgyoG4CNsOTnqI4m4RJ7UGM44-I12VHKiMN-aJI~wfvMb9m3KJzV2f2FP9lu53X9MdO0U9PU~bGKzcsMMvKFWxw2-LQ__",
-  //   name: "Harriett Mullins",
-  //   position: "Human Resources Manager",
-  // },
 ];
