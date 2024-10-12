@@ -31,9 +31,7 @@ export default function Footer() {
           transition={{ duration: 0.4 }}
           className="max-w-[300px] flex flex-col gap-y-2">
           <Image
-            src={
-              "https://s3-alpha-sig.figma.com/img/de1f/4ce8/781ecf0623ef81158eb27a8e275d1b81?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=l5mLxkHK650GsA3mKD35G3gw23RMIBYP-Tu1vAYpX4N85uONXB9o1nAiCgA7UQ8WMZ8bj2ZAW7qK3fMOxEiRQn5OHQzCG8qL4FpaT6JsM7hg4MgUh~xGnIXFKANhK5JczAEJ8axuChOPxtolNUT18sNWbe6L-NVAHjSF74SS93AcABN9M1RwYTOQYX9czEunQtRzpaU6hIfTh3ST2kXzGKTA0yIHCPOKMOucZdcULZ4rq9rQ8dIiVDG~xO9yVyLp~1Lr9JV9l5-G~-2x9F5RMxPNXMOA~rlwgL5vwamO4DJRuuXhyqs9vW0jqcGEJZaaWbrXWOsvnzl~rLkw0jkuXA__"
-            }
+            src={"/zwift.png"}
             width={100}
             height={27}
             alt="ZwiftTech logo"

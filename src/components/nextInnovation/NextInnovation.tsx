@@ -26,7 +26,7 @@ export default function NextInnovation() {
       <div className="w-full aspect-[2.6] flex items-center">
         <Image
           src={
-            "https://s3-alpha-sig.figma.com/img/3c19/dfd9/eda487f6e23400665049729b914cd061?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=o~MvD1KoMmOGOVvbiyi-wrTcqbo2M18iv0eVYCrYUioj4PS02XBFUCikJeqOZ4BoJTf78OyDnc2e-nfKqhEpc-9apxYZKbOTUko1Ae~Iw0c4Pkt2bQgQHhYL7Wbkq~ZnN3p81x4oDDZpnDMYStVuCDnZcdvGkxCQ9~uwtc1Iq4HVJxR3dkaNM-3D2~FFcqzJm9rxQaHM7ET3gbSKE5QtGKssauICZIww7yp1SB7ynjyti3aTBVjwIjOYKVqwAQvVE4BXM4ApiZS~uH3DeK-qD8OJ3DZ9OFtD2sO2NuEDKA~MuWINHr966idf87BchHZievU2qnjfRTYQU2oNnMkTmw__"
+            "/group-of-umbrellas.png"
           }
           width={1300}
           height={500}
