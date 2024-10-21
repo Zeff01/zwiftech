@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { Facebook, Github, LinkedIn, Twitter } from "../icons/Icons";
 import { motion } from "framer-motion";
