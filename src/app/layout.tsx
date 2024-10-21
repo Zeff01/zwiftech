@@ -42,7 +42,7 @@ export default function RootLayout({
                 Our Blog
               </Link>
               <Link
-                href="/"
+                href="/projects"
                 className="text-center border-b-2 border-transparent hover:border-custom-purple hover:text-custom-purple transition-all duration-150">
                 Projects
               </Link>
