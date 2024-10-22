@@ -19,11 +19,11 @@ export default function CardWithImage({ imageUrl, alt, title }: ICardWithImage) 
         initial={{ y: "-200%", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4 }}
-        className="flex flex-row items-center justify-between">
+        className="flex flex-row items-center justify-center">
         <p className="font-semibold text-xl sm:text-2xl">{title}</p>
-        <Button variant="outline" className="sm:text-lg">
+        {/* <Button variant="outline" className="sm:text-lg">
           Explore
-        </Button>
+        </Button> */}
       </motion.div>
     </div>
   );

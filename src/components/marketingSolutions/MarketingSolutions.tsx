@@ -4,7 +4,7 @@ import { basicCardData } from "@/lib/data";
 
 export default function MarketingSolutions() {
   return (
-    <SectionContainer className="flex flex-col items-center gap-y-12">
+    <SectionContainer className="flex flex-col items-center gap-y-12" id="technology">
       <h2 className="font-bold text-lg sm:text-xl">What We Offer</h2>
       <h1 className="font-bold  text-2xl sm:text-3xl text-custom-purple">
         Our Technology Solutions

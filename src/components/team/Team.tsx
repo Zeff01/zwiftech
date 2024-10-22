@@ -6,7 +6,7 @@ import { teamCardData } from "@/lib/data";
 
 export default function Team() {
   return (
-    <SectionContainer className="flex flex-col gap-y-12">
+    <SectionContainer className="flex flex-col gap-y-12" id="team">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -37,14 +37,14 @@ export default function Team() {
             className="sm:text-lg max-w-[700px] text-center sm:text-start">
             Discover how ZwiftTech's world-class talents can transform your business. Reach out to us for tailored technology solutions that drive innovation and success. We're here to help you navigate the digital landscape and achieve your goals. Let's connect and create the future together.
           </motion.p>
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
             className="flex flex-row gap-x-4">
             <Button variant="outline">Learn More</Button>
             <Button>Get Started</Button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </SectionContainer>

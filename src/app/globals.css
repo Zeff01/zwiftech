@@ -14,3 +14,7 @@
     text-wrap: balance;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

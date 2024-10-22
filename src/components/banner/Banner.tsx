@@ -1,3 +1,4 @@
+"use client"
 import Button from "../button/Button";
 import GroupImages from "../groupImages/GroupImages";
 import SectionContainer from "../sectionContainer/SectionContainer";
@@ -5,8 +6,10 @@ import { FaArrowDown } from "react-icons/fa6";
 import { imagesData } from "@/lib/data";
 import { Microsoft, IBM, Ebay, Amazon, Dropbox } from "../icons/Icons";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function Banner() {
+  const router = useRouter()
   return (
     <SectionContainer className="flex flex-col items-center gap-y-6">
       <motion.h1
@@ -33,7 +36,7 @@ export default function Banner() {
         Meet the Leaders of ZwiftTech
       </motion.h2>
       <GroupImages imagesData={imagesData} />
-      <Button>Get Started</Button>
+      <Button onClick={() => router.push("/#technology")}>Get Started</Button>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +55,7 @@ export default function Banner() {
           <p className="font-semibold">Product</p>
         </div>
       </motion.div>
-      <Button variant="icon">
+      <Button variant="icon" onClick={() => router.push("/#team")}>
         <FaArrowDown className=" text-lg sm:text-xl" />
       </Button>
       <h3 className="font-bold text-custom-gray text-xl">Trusted by Job Holders from</h3>

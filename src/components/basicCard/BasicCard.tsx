@@ -23,9 +23,9 @@ export default function BasicCard({ title, subTitle }: IBasicCard) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         className="w-fit self-end">
-        <Button variant="ghost" className="text-sm sm:text-base font-semibold pb-0">
+        {/* <Button variant="ghost" className="text-sm sm:text-base font-semibold pb-0">
           Learn More
-        </Button>
+        </Button> */}
       </motion.div>
     </div>
   );

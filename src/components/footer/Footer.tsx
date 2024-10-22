@@ -1,7 +1,8 @@
 "use client"
 import Image from "next/image";
-import { Facebook, Github, LinkedIn, Twitter } from "../icons/Icons";
+// import { Facebook, Github, LinkedIn, Twitter } from "../icons/Icons";
 import { motion } from "framer-motion";
+import { Mail, MapPin, PhoneCall, Smartphone } from "lucide-react";
 
 export default function Footer() {
   const parentVariants = {
@@ -66,6 +67,31 @@ export default function Footer() {
             <motion.p variants={childVariants}>Applete</motion.p>
             <motion.p variants={childVariants}>BradWell</motion.p>           
           </motion.div>
+          <motion.div
+            id="contacts"
+            className="min-w-[120px] flex flex-col"
+            variants={parentVariants}
+            initial="hidden"
+            whileInView="show">
+            <motion.p className="font-semibold" variants={childVariants}>
+              Contact Us
+            </motion.p>
+            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center"><Smartphone size={18} /> 
+            <span>
+            0921 090 0799
+            </span>
+            </motion.p>
+            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center"><Mail size={18} /> 
+            <span>
+            Codebility.dev@gmail.com
+            </span>
+            </motion.p>
+            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center"><PhoneCall size={18} /> 
+            <span>
+            (02)8671−8943
+            </span>
+            </motion.p>           
+          </motion.div>
         </div>
       </div>
       <div className="flex flex-col sm:flex-row items-center justify-between pt-6 pb-12 gap-3">
@@ -80,11 +106,15 @@ export default function Footer() {
           initial={{ x: "100%" }}
           whileInView={{ x: 0 }}
           transition={{ duration: 0.4, type: "spring" }}
-          className="flex flex-row gap-x-6">
-          <Facebook />
+          className="flex flex-row gap-x-3">
+          {/* <Facebook />
           <Github />
           <LinkedIn />
-          <Twitter />
+          <Twitter /> */}
+          <MapPin />
+          <p>
+          Unit 1204.  Discovery Suites, 25 ADB Avenue, san Antonio Pasig
+          </p>
         </motion.div>
       </div>
     </footer>
