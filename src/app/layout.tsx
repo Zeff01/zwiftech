@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   description: "Elevate Your Business with Next-Generation Technology Solutions",
   authors: {
     url: "https://staging.codebility.tech/", // NOTE: is this correct?
-    name: "Codibility",
+    name: "Codebility",
   },
-  keywords: ["Zwift Tech", "ZwiftTech", "Codibility"],  
+  keywords: ["Zwift Tech", "ZwiftTech", "Codebility"],  
 };
 
 export default function RootLayout({

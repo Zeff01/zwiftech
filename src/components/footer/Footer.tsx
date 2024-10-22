@@ -63,7 +63,7 @@ export default function Footer() {
             <motion.p className="font-semibold" variants={childVariants}>
               Partnerships
             </motion.p>
-            <motion.p variants={childVariants}>Codibility</motion.p>
+            <motion.p variants={childVariants}>Codebility</motion.p>
             <motion.p variants={childVariants}>Applete</motion.p>
             <motion.p variants={childVariants}>BradWell</motion.p>           
           </motion.div>
