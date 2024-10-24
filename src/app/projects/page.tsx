@@ -1,7 +1,7 @@
 const images = ["a", "b", "c", "d", "e", "f", "y", "z", "i", 'j', "k", "l", "q", "r", "s"]
 import Footer from "@/components/footer/Footer"
 import Image from "next/image"
-// import Link from "next/link"
+import Link from "next/link"
 
 export default function Projects() {
     return (
@@ -73,6 +73,7 @@ export default function Projects() {
                             }
                         </section>
                     </div>
+                    <Link className="text-custom-purple underline" href="/projects/applete/privacy-policy">Privacy Policy</Link>
                     <div className="flex flex-col gap-y-3">
                         <h4 className="font-semibold">Coming Soon On</h4>
                         <div className="flex flex-row gap-x-4">
