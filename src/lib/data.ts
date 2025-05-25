@@ -1,17 +1,20 @@
 export const imagesData = [
   {
-    imageUrl:"/joanne-reyes.png",    
-    alt: "ZwiftTech founder"
-
+    imageUrl: "/joanne-reyes.png",
+    alt: "ZwiftTech founder",
   },
   {
-    imageUrl: "/armand-reyes.png",    
-    alt: "ZwiftTech founder"
+    imageUrl: "/armand-reyes.png",
+    alt: "ZwiftTech founder",
   },
   {
     imageUrl: "/zeff.png",
-    alt: "ZwiftTech founder"
-  },  
+    alt: "ZwiftTech founder",
+  },
+  {
+    imageUrl: "/sherwin.png",
+    alt: "ZwiftTech founder",
+  },
 ];
 
 export const basicCardData = [
@@ -36,26 +39,22 @@ export const basicCardData = [
 
 export const cardWithImageData = [
   {
-    imageUrl:
-      "/office-meeting.png",
+    imageUrl: "/office-meeting.png",
     alt: "Office Meeting",
     title: "Collaborate with our team",
   },
   {
-    imageUrl:
-      "/high-rise-building.png",
+    imageUrl: "/high-rise-building.png",
     alt: "High Rise Building",
     title: "Build your business",
   },
   {
-    imageUrl:
-      "/planning.png",
+    imageUrl: "/planning.png",
     alt: "Planning",
     title: "Plan your future endeavor",
   },
   {
-    imageUrl:
-      "/team-photo.png",
+    imageUrl: "/team-photo.png",
     alt: "Team Photo",
     title: "Manage your team",
   },
@@ -63,10 +62,9 @@ export const cardWithImageData = [
 
 export const teamCardData = [
   {
-    imageUrl:"/joanne-reyes.png",
+    imageUrl: "/joanne-reyes.png",
     name: "Joanne Reyes",
     position: "Co-Founder",
-
   },
   {
     imageUrl: "/armand-reyes.png",
@@ -76,6 +74,11 @@ export const teamCardData = [
   {
     imageUrl: "/zeff.png",
     name: "Jzeff Kendrew Somera",
+    position: "Co-Founder",
+  },
+  {
+    imageUrl: "/sherwin.png",
+    name: "Sherwin Gonzales",
     position: "Co-Founder",
   },
 ];
