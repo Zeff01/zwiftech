@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "../button/Button";
 import { motion } from "framer-motion";
 
 interface ICardWithImage {

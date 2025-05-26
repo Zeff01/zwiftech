@@ -39,7 +39,7 @@ export default function Footer() {
             alt="ZwiftTech logo"
           />
           <p className="sm:text-lg">
-            Thank you for choosing ZwiftTech. Let's innovate and succeed together.
+            Thank you for choosing ZwiftTech. Let&apos;s innovate and succeed together.
           </p>
         </motion.div>
         <div className="flex flex-row flex-grow justify-center sm:justify-around sm:text-lg gap-3 flex-wrap">
