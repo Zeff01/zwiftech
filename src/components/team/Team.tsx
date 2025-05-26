@@ -1,4 +1,3 @@
-import Button from "../button/Button";
 import TeamCard from "../teamCard/TeamCard";
 import SectionContainer from "../sectionContainer/SectionContainer";
 import { motion } from "framer-motion";
@@ -17,7 +16,10 @@ export default function Team() {
         </p>
         <p className="font-bold text-2xl sm:text-4xl text-custom-purple">ZwiftTech’s Team</p>
         <p className="sm:text-lg max-w-[700px] text-center">
-        At ZwiftTech, we pride ourselves on our team of world-class talents. Our experts bring unparalleled skill and innovation to every project, ensuring exceptional results for our clients. With a diverse team of industry leaders, we consistently deliver cutting-edge solutions that set the standard in technology.
+          At ZwiftTech, we pride ourselves on our team of world-class talents. Our experts bring
+          unparalleled skill and innovation to every project, ensuring exceptional results for our
+          clients. With a diverse team of industry leaders, we consistently deliver cutting-edge
+          solutions that set the standard in technology.
         </p>
       </motion.div>
       <div className="flex flex-row flex-wrap gap-3 sm:gap-4 justify-center">
@@ -35,7 +37,10 @@ export default function Team() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
             className="sm:text-lg max-w-[700px] text-center sm:text-start">
-            Discover how ZwiftTech's world-class talents can transform your business. Reach out to us for tailored technology solutions that drive innovation and success. We're here to help you navigate the digital landscape and achieve your goals. Let's connect and create the future together.
+            Discover how ZwiftTech&apos;s world-class talents can transform your business. Reach out
+            to us for tailored technology solutions that drive innovation and success. We&apos;re
+            here to help you navigate the digital landscape and achieve your goals. Let&apos;s
+            connect and create the future together.
           </motion.p>
           {/* <motion.div
             initial={{ opacity: 0, x: 100 }}
