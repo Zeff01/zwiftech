@@ -1,4 +1,3 @@
-import Button from "../button/Button";
 import { motion } from "framer-motion";
 
 interface IBasicCard {
