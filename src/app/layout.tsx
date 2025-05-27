@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://staging.codebility.tech/", // NOTE: is this correct?
     name: "Codebility",
   },
-  keywords: ["Zwift Tech", "ZwiftTech", "Codebility"],  
+  keywords: ["Zwift Tech", "ZwiftTech", "Codebility"],
 };
 
 export default function RootLayout({
@@ -27,7 +27,14 @@ export default function RootLayout({
       <body className={lato.className}>
         <nav className="w-full pt-6 px-2 sm:px-8 md:px-12 lg:px-16 flex flex-row gap-x-4 justify-between items-center">
           <Link href={"/"}>
-            <Image src={"./logo.svg"} width={100} height={56} alt="ZwiftTech logo" />
+            <Image
+              src={"./logo.svg"}
+              width={100}
+              height={56}
+              className="w-[100px] h-[56px]"
+              alt="ZwiftTech logo"
+              priority
+            />
           </Link>
           <div className="hidden sm:flex flex-row items-center gap-x-6 md:gap-x-10">
             <div className="flex flex-row gap-x-3 md:gap-x-6 font-semibold">
