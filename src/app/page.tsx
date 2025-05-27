@@ -7,6 +7,7 @@ import MissionVision from "@/components/missionVision/MissionVision";
 import Team from "@/components/team/Team";
 import Footer from "@/components/footer/Footer";
 import NextInnovation from "@/components/nextInnovation/NextInnovation";
+import Packages from "@/components/packages/Packages";
 export default function Home() {
   return (
     <main className="flex w-full min-h-screen flex-col items-center">
@@ -16,6 +17,7 @@ export default function Home() {
       <MissionVision />
       <NextInnovation />
       <Team />
+      <Packages />
       <Footer />
     </main>
   );
