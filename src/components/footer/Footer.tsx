@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 // import { Facebook, Github, LinkedIn, Twitter } from "../icons/Icons";
 import { motion } from "framer-motion";
@@ -32,12 +32,7 @@ export default function Footer() {
           }}
           transition={{ duration: 0.4 }}
           className="max-w-[300px] flex flex-col gap-y-2">
-          <Image
-            src={"/zwift.png"}
-            width={100}
-            height={27}
-            alt="ZwiftTech logo"
-          />
+          <Image src={"/zwift.png"} width={100} height={27} alt="ZwiftTech logo" />
           <p className="sm:text-lg">
             Thank you for choosing ZwiftTech. Let&apos;s innovate and succeed together.
           </p>
@@ -53,8 +48,9 @@ export default function Footer() {
             </motion.p>
             <motion.p variants={childVariants}>Software Solutions</motion.p>
             <motion.p variants={childVariants}>AI integration</motion.p>
-            <motion.p variants={childVariants}>Business Tech Integration</motion.p>           
-          </motion.div>          
+            <motion.p variants={childVariants}>Business Tech Integration</motion.p>
+            <motion.p variants={childVariants}>Applete</motion.p>
+          </motion.div>
           <motion.div
             className="min-w-[120px] flex flex-col items-center"
             variants={parentVariants}
@@ -64,8 +60,8 @@ export default function Footer() {
               Partnerships
             </motion.p>
             <motion.p variants={childVariants}>Codebility</motion.p>
-            <motion.p variants={childVariants}>Applete</motion.p>
-            <motion.p variants={childVariants}>BradWell</motion.p>           
+            <motion.p variants={childVariants}>BradWell</motion.p>
+            <motion.p variants={childVariants}>Tapup</motion.p>
           </motion.div>
           <motion.div
             id="contacts"
@@ -76,21 +72,18 @@ export default function Footer() {
             <motion.p className="font-semibold" variants={childVariants}>
               Contact Us
             </motion.p>
-            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center"><Smartphone size={18} /> 
-            <span>
-            0921 090 0799
-            </span>
+            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center">
+              <Smartphone size={18} />
+              <span>0921 090 0799</span>
             </motion.p>
-            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center"><Mail size={18} /> 
-            <span>
-            Codebility.dev@gmail.com
-            </span>
+            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center">
+              <Mail size={18} />
+              <span>Codebility.dev@gmail.com</span>
             </motion.p>
-            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center"><PhoneCall size={18} /> 
-            <span>
-            (02)8671−8943
-            </span>
-            </motion.p>           
+            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center">
+              <PhoneCall size={18} />
+              <span>(02)8671−8943</span>
+            </motion.p>
           </motion.div>
         </div>
       </div>
@@ -112,9 +105,7 @@ export default function Footer() {
           <LinkedIn />
           <Twitter /> */}
           <MapPin />
-          <p>
-          Unit 1204.  Discovery Suites, 25 ADB Avenue, san Antonio Pasig
-          </p>
+          <p>Unit 1204. Discovery Suites, 25 ADB Avenue, san Antonio Pasig</p>
         </motion.div>
       </div>
     </footer>

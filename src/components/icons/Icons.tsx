@@ -1,7 +1,7 @@
 export function Microsoft() {
   return (
     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_26_50)">
+      <g clipPath="url(#clip0_26_50)">
         <path d="M23.7629 23.7629H0V0H23.7629V23.7629Z" fill="#F1511B" />
         <path d="M50 23.7629H26.2373V0H50V23.7629Z" fill="#80CC28" />
         <path d="M23.7623 50.0004H0V26.2375H23.7623V50.0004Z" fill="#00ADEF" />
