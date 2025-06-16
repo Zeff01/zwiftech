@@ -10,7 +10,7 @@ import NextInnovation from "@/components/nextInnovation/NextInnovation";
 import Packages from "@/components/packages/Packages";
 export default function Home() {
   return (
-    <main className="flex w-full min-h-screen flex-col items-center">
+    <>
       <Banner />
       <MarketingSolutions />
       <Presentation />
@@ -19,6 +19,6 @@ export default function Home() {
       <Team />
       <Packages />
       <Footer />
-    </main>
+    </>
   );
 }

@@ -19,8 +19,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -77,13 +75,68 @@ html {
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  .animate-gradient-move {
+    animation: gradientMove 4s linear infinite;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 1.2s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  /* 
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      box-shadow: 0 0 25px 6px rgba(255, 255, 255, 0.2);
+    }
+  } */
+
+  @keyframes gradientMove {
+    0% {
+      transform: translateX(-100%) rotate(-55deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(-55deg);
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px) rotate(-45deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) rotate(-45deg);
+    }
   }
 }
