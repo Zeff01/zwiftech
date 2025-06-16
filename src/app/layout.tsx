@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import Image from "next/image";
 const lato = Lato({ subsets: ["latin"], weight: "400" });
-import Link from "next/link";
-import SideBar from "@/components/sideBar/SideBar";
 
 export const metadata: Metadata = {
   title: "ZwiftTech",
