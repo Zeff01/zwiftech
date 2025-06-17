@@ -119,7 +119,6 @@ function StatCard({ number, label, delay = 0 }: StatCardProps) {
   useEffect(() => {
     if (!isInView) return;
 
-    let start = 0;
     const duration = 1200;
     const startTime = performance.now();
 
