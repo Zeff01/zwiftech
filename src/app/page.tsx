@@ -13,9 +13,10 @@ export default function Home() {
     <>
       <Banner />
       <MarketingSolutions />
+      <NextInnovation />
       <Presentation />
       <MissionVision />
-      <NextInnovation />
+
       <Team />
       <Packages />
       <Footer />
