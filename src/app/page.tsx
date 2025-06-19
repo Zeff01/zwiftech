@@ -8,16 +8,18 @@ import Team from "@/components/team/Team";
 import Footer from "@/components/footer/Footer";
 import NextInnovation from "@/components/nextInnovation/NextInnovation";
 import Packages from "@/components/packages/Packages";
+import Testimonials from "@/components/testimonials/Testimonials";
 export default function Home() {
   return (
     <>
       <Banner />
       <MarketingSolutions />
       <NextInnovation />
+      <Testimonials />
+      <Team />
       <Presentation />
       <MissionVision />
 
-      <Team />
       <Packages />
       <Footer />
     </>

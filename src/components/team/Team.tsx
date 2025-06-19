@@ -1,57 +1,113 @@
-import TeamCard from "../teamCard/TeamCard";
-import SectionContainer from "../sectionContainer/SectionContainer";
-import { motion } from "framer-motion";
-import { teamCardData } from "@/lib/data";
+"use client";
 
-export default function Team() {
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+
+const founders = [
+  {
+    name: "Joanne Reyes",
+    image: "/joanne-reyes.png",
+  },
+  {
+    name: "Armand Reyes",
+    image: "/armand-reyes.png",
+  },
+  {
+    name: "Jzeff Kendrew Somera",
+    image: "/zeff.png",
+  },
+  {
+    name: "Sherwin Gonzales",
+    image: "/sherwin.png",
+  },
+];
+
+export default function InnovationStats() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const relativeX = e.clientX - rect.left;
+      const relativeY = e.clientY - rect.top;
+      setMousePos({ x: relativeX - 350, y: relativeY - 350 });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <SectionContainer className="flex flex-col gap-y-12" id="team">
+    <section className="relative w-full bg-[#6150eb] overflow-hidden text-white" ref={containerRef}>
+      {/* Floating Background Effects */}
       <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        className="flex flex-col items-center gap-y-4">
-        <p className="text-lg sm:text-xl font-bold text-center">
-          Our Passionate team of creative professionals
-        </p>
-        <p className="font-bold text-2xl sm:text-4xl text-custom-purple">ZwiftTech’s Team</p>
-        <p className="sm:text-lg max-w-[700px] text-center">
-          At ZwiftTech, we pride ourselves on our team of world-class talents. Our experts bring
-          unparalleled skill and innovation to every project, ensuring exceptional results for our
-          clients. With a diverse team of industry leaders, we consistently deliver cutting-edge
-          solutions that set the standard in technology.
-        </p>
-      </motion.div>
-      <div className="flex flex-row flex-wrap gap-3 sm:gap-4 justify-center">
-        {teamCardData.map((d, i) => (
-          <TeamCard key={i} {...d} />
-        ))}
+        className="absolute w-[700px] h-[700px] bg-[#7464f6] rounded-full opacity-40 z-0"
+        animate={{ x: mousePos.x, y: mousePos.y }}
+        transition={{ type: "spring", stiffness: 50, damping: 20 }}
+      />
+      <motion.div
+        className="absolute w-[700px] h-[700px] bg-[#7464f6] rounded-full opacity-40 z-0"
+        style={{ bottom: -200, right: -150 }}
+        animate={{
+          x: [0, 15, 0, -15, 0],
+          y: [0, 10, 0, -10, 0],
+        }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <div className="absolute z-10 top-[220px] right-[-80px] rotate-[-45deg]">
+        <div className="w-[240px] h-[120px] border-[2px] border-[#8a7bff] rounded-full" />
       </div>
-      <div className="py-16 flex flex-col gap-y-3">
-        <h2 className="font-bold text-3xl sm:text-4xl text-custom-purple text-center sm:text-start">
-          Connect With Us
-        </h2>
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-x-16 gap-y-6">
-          <motion.p
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="sm:text-lg max-w-[700px] text-center sm:text-start">
-            Discover how ZwiftTech&apos;s world-class talents can transform your business. Reach out
-            to us for tailored technology solutions that drive innovation and success. We&apos;re
-            here to help you navigate the digital landscape and achieve your goals. Let&apos;s
-            connect and create the future together.
-          </motion.p>
-          {/* <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="flex flex-row gap-x-4">
-            <Button variant="outline">Learn More</Button>
-            <Button>Get Started</Button>
-          </motion.div> */}
+      <div className="absolute z-10 bottom-[50px] left-[-100px] rotate-[-45deg]">
+        <div className="w-[200px] h-[100px] border-[2px] border-[#8a7bff] rounded-full" />
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 px-6 py-24 max-w-6xl mx-auto text-center">
+        <h3 className="text-[35px] font-light mb-2">Meet our Founders</h3>
+        <h2 className="text-[63px] font-extrabold mb-6">ZwiftTech’s Team</h2>
+        <p className="max-w-2xl mx-auto mb-16 text-lg font-light">
+          At ZwiftTech, we empower businesses with tailored technology solutions. Our services
+          include software development, data analytics, and cloud integration, helping clients
+          streamline operations and drive growth.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-center">
+          {founders.map((founder, index) => (
+            <motion.div
+              key={founder.name}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              className="flex flex-col items-center">
+              <div className="relative w-52 h-52">
+                {/* Ring Layer */}
+                <div className="absolute inset-[-10px] rounded-full border-[2px] border-[#8a7bff] z-10" />
+
+                {/* Image Layer */}
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl z-20">
+                  <Image
+                    src={founder.image}
+                    alt={founder.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 150px"
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+
+              <p className="mt-4 font-semibold text-lg">{founder.name}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </SectionContainer>
+    </section>
   );
 }

@@ -6,7 +6,6 @@ import Navigation from "../navigation/Navigation";
 import Image from "next/image";
 
 export default function HeroSection() {
-  const [offsetY, setOffsetY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -14,7 +13,6 @@ export default function HeroSection() {
   // Parallax on scroll
   useEffect(() => {
     const handleScroll = () => {
-      setOffsetY(window.scrollY);
       setIsScrolled(window.scrollY > 200);
     };
     window.addEventListener("scroll", handleScroll);
@@ -87,34 +85,9 @@ export default function HeroSection() {
       />
 
       {/* Oval Ring */}
-      <div
-        className="absolute z-10"
-        style={{
-          top: `${100 - offsetY * 0.2}px`,
-          right: `-${100 - offsetY * 0.1}px`,
-          transform: "rotate(-45deg)",
-        }}>
-        <motion.div
-          className="w-[240px] h-[120px] border-[2px] rounded-full"
-          animate={{ borderColor: ["#705ff3", "#6150eb", "#705ff3"] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        />
+      <div className="absolute z-10 top-[220px] right-[-80px] rotate-[-45deg]">
+        <div className="w-[240px] h-[120px] border-[2px] border-[#8a7bff] rounded-full" />
       </div>
-
-      {/* Floating elements */}
-      {[
-        { top: "30%", left: "20%" },
-        { top: "50%", left: "70%" },
-        { top: "70%", left: "10%" },
-      ].map((pos, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-3 h-3 bg-white/20 rounded-full z-10"
-          style={{ top: pos.top, left: pos.left }}
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 4 + i, repeat: Infinity, ease: "easeInOut" }}
-        />
-      ))}
 
       <div className="relative -mt-20 w-full px-4 md:px-8 mx-auto max-w-screen-2xl min-h-screen grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 items-center z-10">
         {/* Image Section */}
@@ -139,20 +112,7 @@ export default function HeroSection() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
 
-            <motion.div
-              className="absolute inset-[-26px] rounded-full border-[1px] -z-10"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              style={{ borderColor: "#8a7bff" }}
-            />
-
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-[#8a7bff] z-20"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-            />
+            <div className="absolute inset-[-26px] rounded-full border-[1px] border-[#8a7bff] -z-10" />
 
             <motion.div
               className="relative z-30 w-full h-full"

@@ -38,7 +38,7 @@ export default function Services() {
     <section ref={sectionRef} className="relative bg-white py-24 overflow-hidden">
       <motion.div
         style={{ y: leftY }}
-        className="absolute top-10 left-0 w-1/3 pointer-events-none z-0">
+        className="absolute top-10 left-0 w-auto pointer-events-none z-0">
         <Image
           src="/service-left-image.svg"
           alt="Left background"
@@ -50,7 +50,7 @@ export default function Services() {
 
       <motion.div
         style={{ y: rightY }}
-        className="absolute bottom-10 right-0 w-1/3 pointer-events-none z-0">
+        className="absolute bottom-10 right-0 w-auto pointer-events-none z-0">
         <Image
           src="/service-right-image.svg"
           alt="Right background"

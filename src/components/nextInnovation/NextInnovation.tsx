@@ -79,9 +79,9 @@ export default function InnovationStats() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
           <div>
-            <p className="text-lg font-medium">We Help You</p>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Your Next <br />
+            <p className="text-[35px] font-medium">We Help You</p>
+            <h2 className="text-[63px] md:text-5xl font-bold leading-tight">
+              Your Next 
               Innovation.
             </h2>
           </div>
