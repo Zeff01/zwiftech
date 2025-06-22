@@ -32,14 +32,22 @@ export default function PageLoaderProvider({ children }: { children: React.React
     }
   }, []);
 
-  // Handle route transitions
   useEffect(() => {
     if (!canRender) return;
 
-    setIsLoading(true);
-    const timeout = setTimeout(() => setIsLoading(false), 1000); // short loader for transitions
-    return () => clearTimeout(timeout);
-  }, [pathname, canRender]);
+    let timeoutId: ReturnType<typeof setTimeout>;
+
+    const startTransition = () => {
+      setIsLoading(true);
+      timeoutId = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    };
+
+    startTransition();
+
+    return () => clearTimeout(timeoutId);
+  }, [pathname]); // ✅ only listens to pathname
 
   return (
     <PageLoaderContext.Provider value={{ isLoading }}>
