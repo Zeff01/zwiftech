@@ -3,9 +3,7 @@ import { PackageCard, PackageCardProps } from "./PackageCard";
 const packages: PackageCardProps[] = [
   {
     name: "Starter",
-    icon: "🟡",
-    value: "~$4,050 AUD",
-    price: "$2,500 AUD",
+    price: "2,500",
     tagline: "Entry Package",
     color: "text-red-500",
     features: [
@@ -26,9 +24,7 @@ const packages: PackageCardProps[] = [
   },
   {
     name: "Growth",
-    icon: "🟠",
-    value: "~$8,500 AUD",
-    price: "$5,000 AUD",
+    price: "5,000",
     tagline: "Includes Starter +",
     color: "text-orange-500",
     features: [
@@ -46,9 +42,8 @@ const packages: PackageCardProps[] = [
   },
   {
     name: "Pro",
-    icon: "🔵",
-    value: "~$17,500 AUD",
-    price: "$10,000 AUD",
+    price: "10,000",
+    recommended: true,
     tagline: "Includes Growth +",
     color: "text-blue-500",
     features: [
@@ -67,9 +62,7 @@ const packages: PackageCardProps[] = [
   },
   {
     name: "Scale-Up",
-    icon: "🟣",
-    value: "~$38,000 AUD",
-    price: "$25,000 AUD",
+    price: "25,000",
     tagline: "Includes Pro +",
     color: "text-indigo-500",
     features: [
@@ -89,9 +82,8 @@ const packages: PackageCardProps[] = [
   },
   {
     name: "Enterprise",
-    icon: "🔴",
-    value: "~$70,000+ AUD",
-    price: "$50,000+ AUD",
+
+    price: "50,000",
     tagline: "Includes Scale-Up +",
     color: "text-purple-600",
     features: [

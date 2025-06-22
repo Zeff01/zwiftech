@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { BackgroundImage } from "../backgroundImage/backgroundImage";
 
 export default function Services() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -35,40 +36,37 @@ export default function Services() {
   ];
 
   return (
-    <section ref={sectionRef} className="relative bg-white py-24 overflow-hidden">
+    <section
+      data-section-type="light"
+      ref={sectionRef}
+      className="relative bg-white py-24 overflow-hidden">
+      {/* Background decorations */}
+      <BackgroundImage
+        src="/service-left-image.svg"
+        alt="Left background"
+        y={leftY}
+        position="left"
+      />
+      <BackgroundImage
+        src="/service-right-image.svg"
+        alt="Right background"
+        y={rightY}
+        position="right"
+      />
       <motion.div
-        style={{ y: leftY }}
-        className="absolute top-10 left-0 w-auto pointer-events-none z-0">
-        <Image
-          src="/service-left-image.svg"
-          alt="Left background"
-          width={455}
-          height={1013}
-          className="w-full h-auto"
-        />
-      </motion.div>
-
-      <motion.div
-        style={{ y: rightY }}
-        className="absolute bottom-10 right-0 w-auto pointer-events-none z-0">
-        <Image
-          src="/service-right-image.svg"
-          alt="Right background"
-          width={455}
-          height={1013}
-          className="w-full h-auto"
-        />
-      </motion.div>
-
-      <div className="text-center mb-24 relative z-10">
+        className="text-center mb-24 relative z-10"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}>
         <p className="text-[35px] text-[#6150eb] font-medium">What We Offer</p>
         <h2 className="text-[63px] font-bold text-[#6150eb] mt-2">Our Technology Solutions</h2>
-      </div>
+      </motion.div>
       <motion.div
         className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-fit mx-auto px-6"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         variants={{
           hidden: {},
           visible: {

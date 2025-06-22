@@ -1,102 +1,38 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Navigation from "../navigation/Navigation";
 import Image from "next/image";
+import BubbleGroup from "../bubbles/BubbleGroup";
+import { useHeaderState } from "@/hooks/useHeaderState";
 
 export default function HeroSection() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  // Parallax on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 200);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Mouse move effect for floating circle
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const container = containerRef.current;
-      if (!container) return;
-      const rect = container.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      setMousePos({ x, y });
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("mousemove", handleMouseMove);
-      return () => container.removeEventListener("mousemove", handleMouseMove);
-    }
-  }, []);
-
-  const { scrollY } = useScroll();
-  const yHeading = useTransform(scrollY, [0, 300], [0, -20]);
-  const yParagraph = useTransform(scrollY, [0, 300], [0, -10]);
+  const { isScrolled, onLightSection } = useHeaderState(20, 80); // 80 = nav height in px
 
   return (
     <section
-      className="w-full relative bg-[#6150eb] text-white pb-20 overflow-hidden h-screen"
-      ref={containerRef}>
+      data-section-type="dark"
+      className="w-full relative bg-[#6150eb] text-white pb-20 overflow-hidden h-screen">
       <header
-        className={`${
+        className={`fixed top-0 w-full z-[999] transition-all duration-300 ${
           isScrolled
-            ? "bg-stone-950/50 shadow-md fixed top-0 w-full z-[999] transition-all duration-300 pt-0"
-            : "bg-transparent pt-10"
+            ? onLightSection
+              ? "bg-white text-black shadow-md"
+              : "bg-stone-950/60 text-white shadow-md"
+            : "bg-transparent text-white pt-10"
         }`}>
-        <Navigation />
+        <Navigation scrollLight={{ isScrolled, onLightSection }} />
       </header>
+      <BubbleGroup preset="team" />
 
-      {/* Floating Circle */}
-      <motion.div
-        className="absolute w-[700px] h-[700px] bg-[#7464f6] rounded-full opacity-40 z-0"
-        style={{ top: -100, right: -50 }}
-        animate={
-          mousePos.x && mousePos.y
-            ? {
-                x: mousePos.x - (containerRef.current?.offsetWidth || 0) + 350,
-                y: mousePos.y - 350,
-              }
-            : {
-                x: [0, -20, 0, 20, 0],
-                y: [0, -10, 0, 10, 0],
-              }
-        }
-        transition={
-          mousePos.x && mousePos.y
-            ? {
-                type: "spring",
-                stiffness: 50,
-                damping: 20,
-              }
-            : {
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }
-        }
-      />
-
-      {/* Oval Ring */}
-      <div className="absolute z-10 top-[220px] right-[-80px] rotate-[-45deg]">
-        <div className="w-[240px] h-[120px] border-[2px] border-[#8a7bff] rounded-full" />
-      </div>
-
-      <div className="relative -mt-20 w-full px-4 md:px-8 mx-auto max-w-screen-2xl min-h-screen grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 items-center z-10">
+      <div className="relative mt-10 w-full px-4 md:px-8 mx-auto max-w-screen-2xl min-h-screen grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 items-center z-10">
         {/* Image Section */}
         <motion.div
           className="flex justify-center"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delayChildren: 0.3, staggerChildren: 0.2 }}
-          viewport={{ once: false, amount: 0.6 }}>
+          viewport={{ once: true, amount: 0.6 }}>
           <motion.div className="relative w-[420px] md:w-[440px] 2xl:w-[540px] aspect-square">
             <motion.div
               className="absolute top-[130px] md:top-[115px] 2xl:top-[317px] -right-[69px] md:-right-[65px] 2xl:-right-[150px] w-[820px] 2xl:w-[1500px] h-[424px] md:h-[460px] 2xl:h-[570px] -rotate-[45deg] opacity-1 z-11"
@@ -120,7 +56,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}>
               <Image
-                src="/zeff.png"
+                src="/hero-jzeff.svg"
                 width={420}
                 height={420}
                 alt="Team"
@@ -136,17 +72,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delayChildren: 0.3, staggerChildren: 0.2 }}
-          viewport={{ once: false, amount: 0.6 }}>
-          <motion.h1
-            className="text-4xl md:text-[63px] font-bold leading-[73px] lg:pe-16"
-            style={{ y: yHeading }}>
+          viewport={{ once: true, amount: 0.6 }}>
+          <motion.h1 className="text-4xl md:text-[63px] font-bold leading-[73px] lg:pe-16">
             Elevate Your <span className="text-fuchsia-700">Business </span>
             <br className="md:hidden" /> with Next-Generation
             <br className="md:hidden" /> Technology Solution
           </motion.h1>
-          <motion.p
-            className="mt-6 text-2xl text-white/90 max-w-2xl font-comic"
-            style={{ y: yParagraph }}>
+          <motion.p className="mt-6 text-2xl text-white/90 max-w-2xl font-comic">
             We believe in empowering businesses with cutting-edge technology solutions tailored to
             your unique needs
           </motion.p>

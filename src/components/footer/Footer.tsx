@@ -1,6 +1,6 @@
 "use client";
+
 import Image from "next/image";
-// import { Facebook, Github, LinkedIn, Twitter } from "../icons/Icons";
 import { motion } from "framer-motion";
 import { Mail, MapPin, PhoneCall, Smartphone } from "lucide-react";
 
@@ -8,105 +8,123 @@ export default function Footer() {
   const parentVariants = {
     show: {
       transition: {
-        staggerChildren: 0.2, // Adjust the delay between children animations
+        staggerChildren: 0.15,
       },
     },
   };
 
   const childVariants = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100, damping: 20 },
+    },
   };
 
   return (
-    <footer className="w-full overflow-hidden">
-      <div className="flex flex-col items-center sm:items-start sm:flex-row py-16 border-t border-b border-gray-300 gap-y-6">
+    <footer className="w-full bg-white border-t border-gray-200">
+      <div className="container mx-auto px-4 py-16 flex flex-col sm:flex-row sm:items-start gap-12 sm:gap-24">
+        {/* Brand + Mission */}
         <motion.div
-          initial={{
-            opacity: 0,
-            x: -100,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{ duration: 0.4 }}
-          className="max-w-[300px] flex flex-col gap-y-2">
-          <Image src={"/zwift.png"} width={100} height={27} alt="ZwiftTech logo" />
-          <p className="sm:text-lg">
-            Thank you for choosing ZwiftTech. Let&apos;s innovate and succeed together.
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="max-w-sm flex flex-col gap-3">
+          <Image src="/zwift.png" width={120} height={35} alt="ZwiftTech logo" />
+          <p className="text-gray-600 text-base leading-relaxed">
+            Thank you for choosing <strong>ZwiftTech</strong>. Let&apos;s innovate and succeed
+            together.
           </p>
         </motion.div>
-        <div className="flex flex-row flex-grow justify-center sm:justify-around sm:text-lg gap-3 flex-wrap">
+
+        {/* Links */}
+        <div className="flex flex-1 flex-wrap justify-between gap-y-12 text-sm sm:text-base">
+          {/* Products */}
           <motion.div
-            className="min-w-[120px] flex flex-col items-center"
+            className="min-w-[150px] flex flex-col gap-2"
             variants={parentVariants}
             initial="hidden"
+            viewport={{ once: true }}
             whileInView="show">
-            <motion.p className="font-semibold" variants={childVariants}>
+            <motion.p className="font-semibold text-gray-800" variants={childVariants}>
               Products
             </motion.p>
-            <motion.p variants={childVariants}>Software Solutions</motion.p>
-            <motion.p variants={childVariants}>AI integration</motion.p>
-            <motion.p variants={childVariants}>Business Tech Integration</motion.p>
-            <motion.p variants={childVariants}>Applete</motion.p>
+            {["Software Solutions", "AI Integration", "Business Tech", "Applete"].map((item) => (
+              <motion.p key={item} className="text-gray-600" variants={childVariants}>
+                {item}
+              </motion.p>
+            ))}
           </motion.div>
+
+          {/* Partnerships */}
           <motion.div
-            className="min-w-[120px] flex flex-col items-center"
+            className="min-w-[150px] flex flex-col gap-2"
             variants={parentVariants}
             initial="hidden"
+            viewport={{ once: true }}
             whileInView="show">
-            <motion.p className="font-semibold" variants={childVariants}>
+            <motion.p className="font-semibold text-gray-800" variants={childVariants}>
               Partnerships
             </motion.p>
-            <motion.p variants={childVariants}>Codebility</motion.p>
-            <motion.p variants={childVariants}>BradWell</motion.p>
-            <motion.p variants={childVariants}>Tapup</motion.p>
+            {["Codebility", "BradWell", "Tapup"].map((item) => (
+              <motion.p key={item} className="text-gray-600" variants={childVariants}>
+                {item}
+              </motion.p>
+            ))}
           </motion.div>
+
+          {/* Contact Us */}
           <motion.div
             id="contacts"
-            className="min-w-[120px] flex flex-col"
+            className="min-w-[180px] flex flex-col gap-2"
             variants={parentVariants}
             initial="hidden"
+            viewport={{ once: true }}
             whileInView="show">
-            <motion.p className="font-semibold" variants={childVariants}>
+            <motion.p className="font-semibold text-gray-800" variants={childVariants}>
               Contact Us
             </motion.p>
-            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center">
+            <motion.div variants={childVariants} className="flex items-center gap-2 text-gray-600">
               <Smartphone size={18} />
               <span>0921 090 0799</span>
-            </motion.p>
-            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center">
+            </motion.div>
+            <motion.div variants={childVariants} className="flex items-center gap-2 text-gray-600">
               <Mail size={18} />
               <span>Codebility.dev@gmail.com</span>
-            </motion.p>
-            <motion.p variants={childVariants} className="flex flex-row gap-x-2 items-center">
+            </motion.div>
+            <motion.div variants={childVariants} className="flex items-center gap-2 text-gray-600">
               <PhoneCall size={18} />
-              <span>(02)8671−8943</span>
-            </motion.p>
+              <span>(02) 8671-8943</span>
+            </motion.div>
           </motion.div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row items-center justify-between pt-6 pb-12 gap-3">
-        <motion.p
-          initial={{ x: "-100%" }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 0.4, type: "spring" }}
-          className="text-custom-gray sm:text-lg text-center">
-          © 2024 Zwift Tech. All rights reserved.
-        </motion.p>
-        <motion.div
-          initial={{ x: "100%" }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 0.4, type: "spring" }}
-          className="flex flex-row gap-x-3">
-          {/* <Facebook />
-          <Github />
-          <LinkedIn />
-          <Twitter /> */}
-          <MapPin />
-          <p>Unit 1204. Discovery Suites, 25 ADB Avenue, san Antonio Pasig</p>
-        </motion.div>
+
+      {/* Bottom row */}
+      <div className="border-t border-gray-200 w-full overflow-x-hidden">
+        <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+          <motion.p
+            initial={{ x: -50 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            viewport={{ once: true }}
+            className="text-center w-full sm:w-auto">
+            © 2024 ZwiftTech. All rights reserved.
+          </motion.p>
+          <motion.div
+            className="flex items-center gap-2 text-center sm:text-right w-full sm:w-auto break-words"
+            initial={{ x: 50 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            viewport={{ once: true }}>
+            <MapPin size={18} className="shrink-0" />
+            <span className="break-words">
+              Unit 1204, Discovery Suites, 25 ADB Ave, San Antonio, Pasig
+            </span>
+          </motion.div>
+        </div>
       </div>
     </footer>
   );
