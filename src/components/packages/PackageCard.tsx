@@ -1,78 +1,104 @@
-import React from "react";
+// Updated PackageCard.tsx: dynamic border color via Tailwind + ensure badge visibility
+
+import React, { useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export interface FeatureItem {
   icon: string;
   label: string;
-  expandable?: boolean;
   description?: string;
+  expandable?: boolean;
 }
 
 export interface PackageCardProps {
   name: string;
-  icon: string;
-  value: string;
+  color: string; // e.g. "text-red-500"
   price: string;
   tagline: string;
-  color?: string;
   features: FeatureItem[];
+  recommended?: boolean;
 }
 
 export const PackageCard: React.FC<PackageCardProps> = ({
   name,
-  icon,
-  value,
+  color,
   price,
   tagline,
-  color = "text-red-500",
   features,
+  recommended,
 }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleIndex = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // derive border color class from text color
+  const borderClass = color.replace("text-", "border-");
+
+  const getGradientClass = () => {
+    if (color.includes("orange")) return "from-orange-400 to-orange-500";
+    if (color.includes("red")) return "from-red-400 to-red-500";
+    if (color.includes("purple")) return "from-purple-400 to-purple-500";
+    if (color.includes("indigo")) return "from-indigo-400 to-indigo-500";
+    if (color.includes("blue")) return "from-blue-400 to-blue-500";
+    return "from-gray-400 to-gray-500";
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, x: -40 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.03 }}
-      transition={{ type: "spring", stiffness: 250, damping: 20 }}
-      className="rounded-2xl h-full">
-      <Card className="flex border-0 bg-custom-white shadow-sm flex-col h-full">
-        <CardHeader className="text-center space-y-1">
-          <CardTitle className="text-lg flex items-center justify-center gap-1">
-            <span>{icon}</span> {name}
-          </CardTitle>
-          <p className="text-sm text-muted-foreground">{`Value: ${value}`}</p>
-          <p className={`text-xl font-bold ${color}`}>{price}</p>
-          <p className="text-sm font-semibold">{tagline}</p>
+      viewport={{ once: true }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className={`rounded-2xl border-2 ${borderClass} relative flex flex-col justify-between h-full max-w-full sm:max-w-sm w-full mx-auto px-2`}>
+      {recommended && (
+        <div
+          className={`${borderClass} bg-blue-500 text-white text-sm font-semibold text-center absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full shadow-md z-10`}>
+          Recommended
+        </div>
+      )}
+      <Card className="border-none shadow-none flex flex-col h-full">
+        <CardHeader className="text-left space-y-1 px-5 pt-6 pb-2">
+          <CardTitle className={`text-2xl font-bold ${color}`}>{name}</CardTitle>
+          <p className="text-sm text-muted-foreground">{tagline}</p>
+          <p className="text-2xl font-bold text-black">₱{price}</p>
         </CardHeader>
 
-        <CardContent className="flex-1 space-y-2">
+        <CardContent className="space-y-1 text-sm flex-1 px-5 pb-4">
           {features.map((feature, index) => (
-            <Collapsible key={index}>
-              <div className="flex justify-between items-center border-b py-1">
-                <div className="flex items-center gap-2">
-                  <span>{feature.icon}</span>
-                  <span>{feature.label}</span>
-                </div>
+            <div key={index} className="border-t py-2">
+              <div
+                className="flex items-center justify-between text-gray-700 cursor-pointer"
+                onClick={() => feature.expandable && toggleIndex(index)}>
+                <span>{feature.label}</span>
                 {feature.expandable && (
-                  <CollapsibleTrigger className="text-sm text-gray-500 hover:text-black">
-                    +
-                  </CollapsibleTrigger>
+                  <span className="text-lg text-gray-400">{openIndex === index ? "–" : "+"}</span>
                 )}
               </div>
-              {feature.expandable && feature.description && (
-                <CollapsibleContent className="pl-6 text-sm text-muted-foreground">
-                  {feature.description}
-                </CollapsibleContent>
-              )}
-            </Collapsible>
+              <AnimatePresence>
+                {feature.expandable && openIndex === index && feature.description && (
+                  <motion.p
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-gray-500 mt-1 pl-4">
+                    {feature.description}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </div>
           ))}
         </CardContent>
 
-        <CardFooter>
-          <Button className="w-full bg-gradient-to-r from-indigo-400 to-indigo-500 text-white hover:brightness-110">
-            Get Started!
+        <CardFooter className="mt-auto px-5 pb-6 pt-3">
+          <Button
+            className={`w-full text-white font-semibold flex justify-center items-center gap-2 py-3 rounded-full bg-gradient-to-r ${getGradientClass()}`}>
+            Get Started →
           </Button>
         </CardFooter>
       </Card>

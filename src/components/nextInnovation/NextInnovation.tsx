@@ -4,71 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function InnovationStats() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const relativeX = e.clientX - rect.left;
-      const relativeY = e.clientY - rect.top;
-      setMousePos({ x: relativeX - 350, y: relativeY - 350 }); // 350 = half of 700px
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
   return (
-    <section className="relative w-full bg-[#8c52ff] overflow-hidden" ref={containerRef}>
-      {/* Floating Circle - Top Left (mouse follows) */}
-      <motion.div
-        className="absolute w-[700px] h-[700px] bg-[#8e82ed] rounded-full opacity-40 z-0"
-        animate={{
-          x: mousePos.x,
-          y: mousePos.y,
-        }}
-        transition={{ type: "spring", stiffness: 50, damping: 20 }}
-      />
-
-      {/* Floating Circle - Bottom Right */}
-      <motion.div
-        className="absolute w-[700px] h-[700px] bg-[#8e82ed] rounded-full opacity-40 z-0"
-        style={{ bottom: -200, right: -150 }}
-        animate={{
-          x: [0, 15, 0, -15, 0],
-          y: [0, 10, 0, -10, 0],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-
-      {/* Oval Ring - Top Right */}
-      <div
-        className="absolute z-10"
-        style={{
-          top: "220px",
-          right: "-80px",
-          transform: "rotate(-45deg)",
-        }}>
-        <div className="w-[240px] h-[120px] border-[2px] border-[#8a7bff] rounded-full" />
-      </div>
-
-      {/* Oval Ring - Bottom Left */}
-      <div
-        className="absolute z-10"
-        style={{
-          bottom: "50px",
-          left: "-100px",
-          transform: "rotate(-45deg)",
-        }}>
-        <div className="w-[200px] h-[100px] border-[2px] border-[#8a7bff] rounded-full" />
-      </div>
-
+    <section data-section-type="dark" className="relative w-full bg-[#8c52ff] overflow-hidden">
       {/* Content */}
       <div className="relative z-10 px-8 py-24 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 text-white">
         {/* Left Text */}
@@ -77,12 +14,11 @@ export default function InnovationStats() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <div>
             <p className="text-[35px] font-medium">We Help You</p>
             <h2 className="text-[63px] md:text-5xl font-bold leading-tight">
-              Your Next 
-              Innovation.
+              Your Next Innovation.
             </h2>
           </div>
           <p className="text-sm md:text-base text-gray-100 max-w-lg">
@@ -143,8 +79,8 @@ function StatCard({ number, label, delay = 0 }: StatCardProps) {
       }}
       initial={{ opacity: 0, scale: 0.5 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      viewport={{ once: false }}>
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay, ease: "easeOut" }}>
       <div className="absolute inset-[-10px] rounded-full border-[1px] border-[#8a7bff] z-[1]" />
       <p className="font-bold text-3xl">{count.toLocaleString()}</p>
       <p className="text-sm mt-1">{label}</p>

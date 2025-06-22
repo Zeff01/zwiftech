@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import PageLoaderProvider from "@/components/loader/PageLoaderProvider";
+
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
@@ -22,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-gray-100">
       <body className={lato.className}>
-        <div>{children}</div>
+        <PageLoaderProvider>{children}</PageLoaderProvider>
       </body>
     </html>
   );

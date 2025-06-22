@@ -1,13 +1,22 @@
 import Link from "next/link";
 import SideBar from "../sideBar/SideBar";
 import Image from "next/image";
+type NavigationProps = {
+  scrollLight: {
+    isScrolled: boolean;
+    onLightSection: boolean;
+  };
+};
+export default function Navigation({ scrollLight }: NavigationProps) {
+  const { isScrolled, onLightSection } = scrollLight;
 
-export default function Navigation() {
   return (
     <nav className="relative w-full px-4 sm:px-8 md:px-12 lg:px-16 flex flex-row gap-x-4 justify-between items-center z-20">
       <Link href={"/"}>
         <Image
-          src={"/white-logo.svg"}
+          src={
+            isScrolled ? (onLightSection ? "/logo.svg" : "/white-logo.svg") : "/white-logo.svg" // or something neutral
+          }
           width={100}
           height={56}
           className="w-[100px] h-[56px]"

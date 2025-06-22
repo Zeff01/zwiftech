@@ -9,6 +9,8 @@ import Footer from "@/components/footer/Footer";
 import NextInnovation from "@/components/nextInnovation/NextInnovation";
 import Packages from "@/components/packages/Packages";
 import Testimonials from "@/components/testimonials/Testimonials";
+import CollaboratingWithBrands from "@/components/collaboratingWithBrands/CollaboratingWithBrands";
+
 export default function Home() {
   return (
     <>
@@ -17,10 +19,10 @@ export default function Home() {
       <NextInnovation />
       <Testimonials />
       <Team />
-      <Presentation />
       <MissionVision />
-
+      <Presentation />
       <Packages />
+      <CollaboratingWithBrands />
       <Footer />
     </>
   );

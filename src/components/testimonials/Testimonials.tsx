@@ -3,9 +3,9 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { FaUserCircle } from "react-icons/fa";
 import { StarIcon } from "lucide-react";
+import { BackgroundImage } from "../backgroundImage/backgroundImage";
 
 const testimonials = [
   {
@@ -40,19 +40,23 @@ const cardVariants = {
 };
 
 export default function Testimonials() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+
+  const leftY = useTransform(scrollYProgress, [0, 1], [0, -400]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden py-20 px-6 md:px-20 bg-[#f7f8fc]">
-      {/* Parallax Background */}
-      <motion.div
-        style={{ y }}
-        className="absolute left-0 top-0 w-full h-full flex flex-col justify-around opacity-10">
-        <div className="text-[200px] font-bold text-gray-300 leading-none">💬</div>
-        <div className="text-[200px] font-bold text-gray-300 leading-none self-end">💬</div>
-      </motion.div>
+    <section
+      data-section-type="light"
+      ref={sectionRef}
+      className="relative overflow-hidden py-20 px-6 md:px-20 bg-[#f7f8fc]">
+      {/* Background decorations */}
+      <BackgroundImage
+        src="/testi-left-image.svg"
+        alt="Left background"
+        y={leftY}
+        position="left"
+      />
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -61,7 +65,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}>
+          viewport={{ once: true, amount: 0.3 }}>
           <p className="text-[35px] tracking-wide text-violet-600 font-medium">Testimonials</p>
           <h2 className="text-4xl md:text-[63px] font-bold text-violet-700">
             What Our Clients Say
@@ -70,11 +74,9 @@ export default function Testimonials() {
             Hear from business owners and executives who have trusted us to build their custom
             software solutions.
           </p>
-          <Button
-            variant="outline"
-            className="mt-4 border-violet-500 text-violet-600 hover:bg-violet-100">
-            View More
-          </Button>
+          <button className="mt-20 px-10 py-3 border-2 border-[#6150eb] text-[#6150eb] font-medium rounded-full hover:bg-[#5d4efc] hover:text-white transition">
+            VIEW MORE
+          </button>
         </motion.div>
 
         <div className="flex flex-col gap-6">
@@ -84,7 +86,7 @@ export default function Testimonials() {
               custom={index}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}>
               <Card
                 className="bg-[#d4c2f9] p-6 rounded-xl"
