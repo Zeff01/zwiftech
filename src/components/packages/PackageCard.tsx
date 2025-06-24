@@ -1,14 +1,12 @@
-// Updated PackageCard.tsx: dynamic border color via Tailwind + ensure badge visibility
-
 import React, { useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export interface FeatureItem {
-  icon: string;
+  icon?: string;
   label: string;
-  description?: string;
+  description?: string[];
   expandable?: boolean;
 }
 
@@ -35,7 +33,6 @@ export const PackageCard: React.FC<PackageCardProps> = ({
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // derive border color class from text color
   const borderClass = color.replace("text-", "border-");
 
   const getGradientClass = () => {
@@ -54,7 +51,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
       whileHover={{ scale: 1.03 }}
       viewport={{ once: true }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={`rounded-2xl border-2 ${borderClass} relative flex flex-col justify-between h-full max-w-full sm:max-w-sm w-full mx-auto px-2`}>
+      className={`rounded-2xl border-2 ${borderClass} relative flex flex-col justify-between w-full max-w-[300px] h-full mx-auto px-2`}>
       {recommended && (
         <div
           className={`${borderClass} bg-blue-500 text-white text-sm font-semibold text-center absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full shadow-md z-10`}>
@@ -68,7 +65,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           <p className="text-2xl font-bold text-black">₱{price}</p>
         </CardHeader>
 
-        <CardContent className="space-y-1 text-sm flex-1 px-5 pb-4">
+        <CardContent className="space-y-1 text-sm flex-1 px-5 pb-4 min-h-[200px]">
           {features.map((feature, index) => (
             <div key={index} className="border-t py-2">
               <div
@@ -81,14 +78,16 @@ export const PackageCard: React.FC<PackageCardProps> = ({
               </div>
               <AnimatePresence>
                 {feature.expandable && openIndex === index && feature.description && (
-                  <motion.p
+                  <motion.ul
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="text-gray-500 mt-1 pl-4">
-                    {feature.description}
-                  </motion.p>
+                    className="text-gray-500 mt-2 pl-5 list-disc space-y-1 break-words overflow-hidden">
+                    {feature.description.map((desc, i) => (
+                      <li key={i}>{desc}</li>
+                    ))}
+                  </motion.ul>
                 )}
               </AnimatePresence>
             </div>
