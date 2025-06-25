@@ -24,7 +24,7 @@ export default function TeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-[30px] font-light mb-2">
+          className="text-2xl md:text-[35px] font-medium mb-2">
           Our Services
         </motion.h3>
 
@@ -33,7 +33,7 @@ export default function TeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[50px] font-extrabold mb-10 max-w-2xl mx-auto">
+          className="text-4xl md:text-[63px] font-bold mb-10 max-w-2xl mx-auto leading-none">
           Innovative software and cloud solutions for streamlined, growth-driven operations.
         </motion.h2>
 

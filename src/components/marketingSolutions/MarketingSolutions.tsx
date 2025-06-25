@@ -59,8 +59,10 @@ export default function Services() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}>
-        <p className="text-[35px] text-[#6150eb] font-medium">What We Offer</p>
-        <h2 className="text-[63px] font-bold text-[#6150eb] mt-2">Our Technology Solutions</h2>
+        <p className="text-2xl md:text-[35px] text-[#6150eb] font-medium">What We Offer</p>
+        <h2 className="text-4xl md:text-[63px] font-bold text-[#6150eb] mt-2">
+          Our Technology Solutions
+        </h2>
       </motion.div>
       <motion.div
         className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-fit mx-auto px-6"
