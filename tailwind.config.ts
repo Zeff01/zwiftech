@@ -67,6 +67,7 @@ const config: Config = {
       },
       screens: {
         xsm: "360px",
+        xxl: "1600px",
       },
       borderRadius: {
         lg: "var(--radius)",

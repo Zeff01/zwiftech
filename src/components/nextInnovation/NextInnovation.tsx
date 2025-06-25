@@ -10,14 +10,14 @@ export default function InnovationStats() {
       <div className="relative z-10 px-8 py-24 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 text-white">
         {/* Left Text */}
         <motion.div
-          className="flex flex-col justify-center space-y-6"
+          className="flex flex-col justify-center space-y-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}>
           <div>
-            <p className="text-[35px] font-medium">We Help You</p>
-            <h2 className="text-[63px] md:text-5xl font-bold leading-tight">
+            <p className="text-2xl md:text-[35px] font-medium">We Help You</p>
+            <h2 className="text-4xl md:text-[63px] font-bold leading-tight">
               Your Next Innovation.
             </h2>
           </div>

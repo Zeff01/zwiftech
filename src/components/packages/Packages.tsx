@@ -10,7 +10,7 @@ export default function Packages() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-[30px] font-light ">
+        className="text-2xl md:text-[35px] font-medium ">
         Pick a Plan
       </motion.h3>
 
@@ -19,7 +19,7 @@ export default function Packages() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-[50px] font-extrabold mb-10 max-w-2xl mx-auto ">
+        className="text-4xl md:text-[63px] font-bold mb-10  mx-auto leading-tight ">
         Our Services & Packages
       </motion.h2>
       <PackageList />

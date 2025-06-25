@@ -66,7 +66,9 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}>
-          <p className="text-[35px] tracking-wide text-violet-600 font-medium">Testimonials</p>
+          <p className="text-2xl md:text-[35px] tracking-wide text-violet-600 font-medium">
+            Testimonials
+          </p>
           <h2 className="text-4xl md:text-[63px] font-bold text-violet-700">
             What Our Clients Say
           </h2>

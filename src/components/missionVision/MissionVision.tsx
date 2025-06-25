@@ -38,7 +38,9 @@ export default function MissionVision() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.4 }}>
-          <h4 className="text-[35px] tracking-wide text-[#6150eb] font-medium">What we believe</h4>
+          <h4 className="text-2xl md:text-[35px] tracking-wide text-[#6150eb] font-medium">
+            What we believe
+          </h4>
           <h2 className="text-4xl md:text-[63px] font-bold text-[#6150eb] leading-none">
             Our Mission and Vision
           </h2>
