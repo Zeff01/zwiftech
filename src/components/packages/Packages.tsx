@@ -4,7 +4,7 @@ import PackageList from "./PackageList";
 
 export default function Packages() {
   return (
-    <SectionContainer className="flex flex-col items-center " id="packages">
+    <SectionContainer className="flex flex-col items-center px-6" id="packages">
       <motion.h3
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ export default function Packages() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-4xl md:text-[63px] font-bold mb-10  mx-auto leading-tight ">
+        className="text-4xl md:text-[63px] font-bold mb-10  mx-auto leading-tight text-center ">
         Our Services & Packages
       </motion.h2>
       <PackageList />

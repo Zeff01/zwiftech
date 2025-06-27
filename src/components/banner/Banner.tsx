@@ -52,15 +52,42 @@ export default function HeroSection() {
           viewport={{ once: true, amount: 0.6 }}>
           <div className="relative w-[220px] sm:w-[300px] md:w-[440px] aspect-square">
             {/* blob hidden on small */}
-            <motion.div
-              className="hidden lg:block absolute top-[359px] -right-[161px]
-                         w-[820px] h-[460px] md:w-[1500px] md:h-[460px]
-                        
-                         -rotate-[45deg] z-0"
-              style={{ backgroundColor: "#8a7bff", borderRadius: "9999px" }}
-              animate={{ backgroundColor: ["#8a7bff", "#c840b6", "#8a7bff"] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            />
+            <div className="relative z-0">
+              {/* Original glow ellipse */}
+              <motion.div
+                className="hidden lg:block absolute top-[359px] -right-[161px]
+               w-[820px] h-[460px] md:w-[1500px] md:h-[460px]
+               -rotate-[45deg] z-0"
+                style={{ borderRadius: "9999px" }}
+                animate={{ backgroundColor: ["#8a7bff", "#c840b6", "#8a7bff"] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              />
+
+              {/* Radar sweep overlay */}
+              <motion.div
+                className="hidden lg:block absolute top-[359px] -right-[161px]
+               w-[820px] h-[460px] md:w-[1500px] md:h-[460px]
+               -rotate-[45deg] z-10 pointer-events-none"
+                style={{
+                  borderRadius: "9999px",
+                  background: `conic-gradient(
+        from 0deg,
+        rgba(244, 190, 255, 0.15) 0deg 15deg,
+        transparent 15deg 360deg
+      )`,
+                  WebkitMaskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
+                  maskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
+                  filter: "blur(8px)",
+                  opacity: 0.5,
+                }}
+                animate={{ rotate: [0, 360] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 8,
+                  ease: "linear",
+                }}
+              />
+            </div>
 
             <div className="absolute inset-[-20px] rounded-full border border-[#8a7bff] -z-10" />
 

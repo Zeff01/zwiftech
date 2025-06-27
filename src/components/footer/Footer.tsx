@@ -24,14 +24,15 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-white border-t border-gray-200">
-      <div className="container mx-auto px-4 py-16 flex flex-col sm:flex-row sm:items-start gap-12 sm:gap-24">
-        {/* Brand + Mission */}
+      <div className="container mx-auto px-4 py-16 flex flex-col gap-12">
+        
+        {/* Logo and description - own row on mobile and tablet, 1st column on desktop */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="max-w-sm flex flex-col gap-3">
+          className="flex flex-col gap-3 lg:hidden">
           <Image src="/zwift.png" width={120} height={35} alt="ZwiftTech logo" />
           <p className="text-gray-600 text-base leading-relaxed">
             Thank you for choosing <strong>ZwiftTech</strong>. Let&apos;s innovate and succeed
@@ -39,11 +40,25 @@ export default function Footer() {
           </p>
         </motion.div>
 
-        {/* Links */}
-        <div className="flex flex-1 flex-wrap justify-between gap-y-12 text-sm sm:text-base">
+        {/* Grid: 3 columns on tablet, 4 on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-12">
+          {/* Desktop logo column */}
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="hidden lg:flex flex-col gap-3">
+            <Image src="/zwift.png" width={120} height={35} alt="ZwiftTech logo" />
+            <p className="text-gray-600 text-base leading-relaxed">
+              Thank you for choosing <strong>ZwiftTech</strong>. Let&apos;s innovate and succeed
+              together.
+            </p>
+          </motion.div>
+
           {/* Products */}
           <motion.div
-            className="min-w-[150px] flex flex-col gap-2"
+            className="flex flex-col gap-2"
             variants={parentVariants}
             initial="hidden"
             viewport={{ once: true }}
@@ -60,7 +75,7 @@ export default function Footer() {
 
           {/* Partnerships */}
           <motion.div
-            className="min-w-[150px] flex flex-col gap-2"
+            className="flex flex-col gap-2"
             variants={parentVariants}
             initial="hidden"
             viewport={{ once: true }}
@@ -78,7 +93,7 @@ export default function Footer() {
           {/* Contact Us */}
           <motion.div
             id="contacts"
-            className="min-w-[180px] flex flex-col gap-2"
+            className="flex flex-col gap-2"
             variants={parentVariants}
             initial="hidden"
             viewport={{ once: true }}
@@ -104,17 +119,17 @@ export default function Footer() {
 
       {/* Bottom row */}
       <div className="border-t border-gray-200 w-full overflow-x-hidden">
-        <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
           <motion.p
             initial={{ x: -50 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.5, type: "spring" }}
             viewport={{ once: true }}
-            className="text-center w-full sm:w-auto">
+            className="text-center w-full md:w-auto">
             © 2024 ZwiftTech. All rights reserved.
           </motion.p>
           <motion.div
-            className="flex items-center gap-2 text-center sm:text-right w-full sm:w-auto break-words"
+            className="flex items-center gap-2 text-center md:text-right w-full md:w-auto break-words"
             initial={{ x: 50 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.5, type: "spring" }}

@@ -9,7 +9,7 @@ type BackgroundImageProps = {
 };
 
 export function BackgroundImage({ src, alt, y, position }: BackgroundImageProps) {
-  const baseClass = "absolute w-auto pointer-events-none z-0";
+  const baseClass = "absolute w-auto pointer-events-none z-0 hidden md:block";
   const positionClass = position === "left" ? "top-10 left-0" : "bottom-10 right-0";
 
   return (
