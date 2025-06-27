@@ -12,7 +12,7 @@ export interface FeatureItem {
 
 export interface PackageCardProps {
   name: string;
-  color: string; // e.g. "text-red-500"
+  color: string;
   price: string;
   tagline: string;
   features: FeatureItem[];
@@ -51,7 +51,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
       whileHover={{ scale: 1.03 }}
       viewport={{ once: true }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={`rounded-2xl border-2 ${borderClass} relative flex flex-col justify-between w-full max-w-[300px] h-full mx-auto px-2`}>
+      className={`w-full max-w-full  lg:max-w-[400px] border-2 ${borderClass} relative flex flex-col justify-between h-full sm:mx-auto rounded-2xl`}>
       {recommended && (
         <div
           className={`${borderClass} bg-blue-500 text-white text-sm font-semibold text-center absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full shadow-md z-10`}>
@@ -59,13 +59,13 @@ export const PackageCard: React.FC<PackageCardProps> = ({
         </div>
       )}
       <Card className="border-none shadow-none flex flex-col h-full">
-        <CardHeader className="text-left space-y-1 px-5 pt-6 pb-2">
+        <CardHeader className="text-left space-y-1 px-4 pt-6 pb-2">
           <CardTitle className={`text-2xl font-bold ${color}`}>{name}</CardTitle>
           <p className="text-sm text-muted-foreground">{tagline}</p>
           <p className="text-2xl font-bold text-black">₱{price}</p>
         </CardHeader>
 
-        <CardContent className="space-y-1 text-sm flex-1 px-5 pb-4 min-h-[200px]">
+        <CardContent className="space-y-1 text-sm flex-1 px-4 pb-4 min-h-[200px]">
           {features.map((feature, index) => (
             <div key={index} className="border-t py-2">
               <div
@@ -94,7 +94,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           ))}
         </CardContent>
 
-        <CardFooter className="mt-auto px-5 pb-6 pt-3">
+        <CardFooter className="mt-auto px-4 pb-6 pt-3">
           <Button
             className={`w-full text-white font-semibold flex justify-center items-center gap-2 py-3 rounded-full bg-gradient-to-r ${getGradientClass()}`}>
             Get Started →

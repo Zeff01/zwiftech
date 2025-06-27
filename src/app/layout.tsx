@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-[#bfdbfe]">
+    <html lang="en" className="bg-[#6150eb]">
       <body className={lato.className}>
         <PageLoaderProvider>{children}</PageLoaderProvider>
       </body>

@@ -69,7 +69,7 @@ export default function Testimonials() {
           <p className="text-2xl md:text-[35px] tracking-wide text-violet-600 font-medium">
             Testimonials
           </p>
-          <h2 className="text-4xl md:text-[63px] font-bold text-violet-700">
+          <h2 className="text-4xl md:text-[63px] font-bold text-violet-700 leading-none">
             What Our Clients Say
           </h2>
           <p className="text-gray-600 max-w-md">

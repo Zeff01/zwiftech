@@ -37,7 +37,7 @@ export default function TeamSection() {
           Innovative software and cloud solutions for streamlined, growth-driven operations.
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-fit mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-fit mx-auto">
           {founders.map((founder, index) => (
             <motion.div
               key={founder.name}

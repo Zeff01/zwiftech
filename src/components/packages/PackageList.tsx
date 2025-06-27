@@ -135,7 +135,7 @@ const packages: PackageCardProps[] = [
 
 export default function PackageList() {
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+    <div className="w-full grid gap-6 md:grid-cols-3 xl:grid-cols-5">
       {packages.map((pkg, index) => (
         <PackageCard key={index} {...pkg} />
       ))}
