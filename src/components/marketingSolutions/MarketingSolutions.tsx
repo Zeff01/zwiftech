@@ -54,13 +54,13 @@ export default function Services() {
         position="right"
       />
       <motion.div
-        className="text-center mb-24 relative z-10"
+        className="text-center mb-24 relative z-10 space-y-4"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}>
         <p className="text-2xl md:text-[35px] text-[#6150eb] font-medium">What We Offer</p>
-        <h2 className="text-4xl md:text-[63px] font-bold text-[#6150eb] mt-2">
+        <h2 className="text-4xl md:text-[63px] font-bold text-[#6150eb] mt-2 leading-none">
           Our Technology Solutions
         </h2>
       </motion.div>

@@ -25,7 +25,6 @@ export default function Footer() {
   return (
     <footer className="w-full bg-white border-t border-gray-200">
       <div className="container mx-auto px-4 py-16 flex flex-col gap-12">
-        
         {/* Logo and description - own row on mobile and tablet, 1st column on desktop */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -49,7 +48,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="hidden lg:flex flex-col gap-3">
-            <Image src="/zwift.png" width={120} height={35} alt="ZwiftTech logo" />
+            <Image src="/logo.svg" width={120} height={35} alt="ZwiftTech logo" />
             <p className="text-gray-600 text-base leading-relaxed">
               Thank you for choosing <strong>ZwiftTech</strong>. Let&apos;s innovate and succeed
               together.

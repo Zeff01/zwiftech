@@ -19,7 +19,7 @@ export default function Packages() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-4xl md:text-[63px] font-bold mb-10  mx-auto leading-tight text-center ">
+        className="text-4xl md:text-[63px] font-bold mb-20  mx-auto leading-tight text-center ">
         Our Services & Packages
       </motion.h2>
       <PackageList />

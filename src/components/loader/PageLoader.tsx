@@ -90,7 +90,7 @@ export default function PageLoader() {
 
       {/* Center pulse */}
       <motion.div
-        className="absolute w-24 h-24 rounded-full bg-[#c840b6] blur-2xl"
+        className="absolute w-24 h-24 rounded-full bg-[#fff] blur-2xl"
         initial={{ opacity: 0 }}
         animate={{ scale: [1, 1.6, 1], opacity: [0.4, 0.8, 0.4] }}
         transition={{ duration: 2, repeat: Infinity }}
@@ -106,10 +106,10 @@ export default function PageLoader() {
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
           <Image
-            src="/white-logo.svg"
+            src="/logo.svg"
             width={100}
             height={56}
-            className="w-[100px] h-[56px] drop-shadow-[0_0_20px_#f4beff]"
+            className="w-[100px] h-[56px] drop-shadow-[0_0_20px_#fff]"
             alt="ZwiftTech logo"
             priority
           />

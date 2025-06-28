@@ -6,20 +6,20 @@ import PopupNavMenu from "./PopupNavMenu";
 type NavigationProps = {
   scrollLight: {
     isScrolled: boolean;
-    onLightSection: boolean;
+    onLightSection?: boolean;
   };
 };
 
 export default function Navigation({ scrollLight }: NavigationProps) {
-  const { isScrolled, onLightSection } = scrollLight;
+  const { isScrolled } = scrollLight;
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="relative w-full px-4 sm:px-8 md:px-12 lg:px-16 flex justify-between items-center z-20">
       {/* Logo */}
-      <Link href={"/"}>
+      <Link href={"/"} className={`${isScrolled || "bg-stone-100 rounded-sm px-3"}`}>
         <Image
-          src={isScrolled ? (onLightSection ? "/logo.svg" : "/white-logo.svg") : "/white-logo.svg"}
+          src={"/logo.svg"}
           width={100}
           height={56}
           className="w-[100px] h-[56px]"
@@ -33,7 +33,7 @@ export default function Navigation({ scrollLight }: NavigationProps) {
         <Link href="/projects" className="hover:text-fuchsia-700 transition-all duration-150">
           Projects
         </Link>
-        <Link href="/#contacts" className="hover:text-fuchsia-700 transition-all duration-150">
+        <Link href="#" className="hover:text-fuchsia-700 transition-all duration-150">
           Contacts
         </Link>
         <div
