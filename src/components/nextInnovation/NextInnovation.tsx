@@ -16,7 +16,7 @@ export default function InnovationStats() {
           viewport={{ once: true }}>
           <div>
             <p className="text-2xl md:text-[35px] font-medium">We Help You</p>
-            <h2 className="text-4xl md:text-[63px] font-bold leading-tight">
+            <h2 className="text-4xl md:text-[63px] font-bold leading-none">
               Your Next Innovation.
             </h2>
           </div>

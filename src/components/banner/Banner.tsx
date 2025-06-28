@@ -25,11 +25,11 @@ export default function HeroSection() {
             isScrolled
               ? onLightSection
                 ? "bg-white text-black shadow-md"
-                : "bg-stone-950/60 text-white shadow-md"
+                : "bg-white/60 text-stone-900 shadow-md"
               : "bg-transparent text-white pt-10"
           }
         `}>
-        <Navigation scrollLight={{ isScrolled, onLightSection }} />
+        <Navigation scrollLight={{ isScrolled }} />
       </header>
 
       <BubbleGroup preset="team" />

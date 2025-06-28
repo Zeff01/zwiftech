@@ -42,7 +42,7 @@ export default function Bubble({
       }}
       animate={{
         scale: [1, 1.05, 1],
-        opacity: [0.4, 0.6, 0.4],
+        opacity: [0.1, 0.3, 0.1],
       }}
       transition={{
         duration: 6,

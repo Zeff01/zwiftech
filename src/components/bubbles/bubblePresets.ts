@@ -22,26 +22,26 @@ export const bubblePresets: Record<BubblePresetKey, BubbleConfig[]> = {
     },
     {
       className:
-        "absolute w-[200px] h-[200px] rounded-full bg-[#ff88d1] opacity-20 top-[-70px] right-[-50px] blur-2xl",
+        "absolute w-[200px] h-[200px] rounded-full bg-[#ff88d1] opacity-20 top-[-160px] right-[-50px] blur-2xl",
       speed: "fast",
     },
 
     // Top left subtle bubble
     {
       className:
-        "absolute w-[500px] h-[500px] rounded-full bg-gradient-to-b from-[#4ca1e9] via-[#6150eb] to-transparent opacity-50 top-40 left-[-100px]",
+        "absolute w-[500px] h-[500px] rounded-full bg-gradient-to-b from-[#4ca1e9] via-[#6150eb] to-transparent opacity-30 top-40 left-[-100px]",
       speed: "medium",
     },
 
     // Right side overlapping bubbles
     {
       className:
-        "absolute w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#4ca1e9] via-[#6150eb] to-transparent opacity-40 top-[-100px] right-[-200px]",
+        "absolute w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#4ca1e9] via-[#6150eb] to-transparent opacity-20 top-[-100px] right-[-200px]",
       speed: "slow",
     },
     {
       className:
-        "absolute w-[400px] h-[400px] rounded-full bg-gradient-to-br from-[#4ca1e9] to-transparent opacity-20 top-[0px] right-[-150px]",
+        "absolute w-[400px] h-[400px] rounded-full bg-gradient-to-br from-[#4ca1e9] to-transparent opacity-10 top-[50px] right-[-170px]",
       speed: "medium",
     },
     {
@@ -53,12 +53,12 @@ export const bubblePresets: Record<BubblePresetKey, BubbleConfig[]> = {
     // Accent rings
     {
       className:
-        "absolute w-[130px] h-[130px] border-[3px] border-white rounded-full opacity-20 bottom-[180px] left-[-80px] shadow-[0_0_25px_5px_rgba(255,255,255,0.3)]",
+        "absolute w-[130px] h-[130px] border-[3px] border-white rounded-full opacity-20 bottom-[180px] left-[-80px] shadow-[0_0_25px_5px_rgba(255,255,255,0.2)]",
       speed: "slow",
     },
     {
       className:
-        "absolute w-[300px] h-[300px] border-[3px] border-white rounded-full opacity-20 bottom-[200px] right-[-180px] shadow-[0_0_25px_5px_rgba(255,255,255,0.3)]",
+        "absolute w-[300px] h-[300px] border-[3px] border-white rounded-full opacity-20 bottom-[200px] right-[-180px] shadow-[0_0_25px_5px_rgba(255,255,255,0.2)]",
       speed: "medium",
     },
 
@@ -96,7 +96,7 @@ export const bubblePresets: Record<BubblePresetKey, BubbleConfig[]> = {
     },
     {
       className:
-        "absolute w-[10px] h-[10px] bg-white rounded-full opacity-30 bottom-[280px] right-[10%]",
+        "absolute w-[10px] h-[10px] bg-white rounded-full opacity-10 bottom-[280px] right-[10%]",
       speed: "fast",
     },
   ],
